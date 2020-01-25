@@ -1,8 +1,8 @@
 # Execute Big.
 
-<img src="/img/logo-square.png" width="130" alt="Execute Pig" align="right">
+<img src="/static/img/logo-square.png" width="130" alt="Execute Pig" align="right">
 
-Website for [Execute Big](https://executebig.org), built with Hugo & Bulma. All-in-one.
+Website for [Execute Big](https://executebig.org), built with Hugo & Bulma. Now a monorepo.
 
 ## Developing
 
