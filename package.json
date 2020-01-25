@@ -9,6 +9,6 @@
     "postcss-cli": "^7.1.0"
   },
   "scripts": {
-    "build": "hugo"
+    "build": "hugo --minify"
   }
 }
