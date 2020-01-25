@@ -1,0 +1,49 @@
+<meta name="image" content="{{ .Site.BaseURL }}{{ .Params.card }}" />
+<link rel="shortcut icon" type="image/png" href="/img/logo-square.png" />
+<title>{{ .Params.title }}</title>
+
+<!-- SEO Block -->
+<meta name="title" content="{{ .Params.title }}" />
+<meta name="description" content="{{ .Params.description }}" />
+
+{{ with .Params.keywords }}
+<meta name="keywords" content="{{ range $i, $e := . }}{{ if $i }}, {{ end }}{{ $e }}{{ end }}" />
+{{ end }}
+
+<meta name="robots" content="index, follow" />
+<meta name="image" content="{{ .Site.BaseURL }}{{ .Params.card }}" />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="{{ .Params.title }}" />
+<meta
+  name="twitter:description"
+  content="{{ .Params.description }}"
+/>
+<meta name="twitter:site" content="@executebig" />
+<meta
+  name="twitter:image"
+  content="{{ .Site.BaseURL }}{{ .Params.card }}"
+/>
+
+<!-- Open Graph general (Facebook, Pinterest & Google+) -->
+<meta property="og:title" content="{{ .Params.title }}">
+<meta property="og:description" content="{{ .Params.description }}">
+<meta property="og:image" content="{{ .Site.BaseURL }}{{ .Params.card }}">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:site_name" content="{{ .Site.Title }}">
+<meta property="og:locale" content="en_US">
+
+{{ if isset .Params "video" }}
+<meta property="og:video" content="{{ .Params.video }}">
+{{ end }}
+
+{{ if isset .Params "card" }}
+<meta
+  property="og:image"
+  content="{{ .Site.BaseURL }}{{ .Params.card }}"
+/>
+{{ end }}
+
+<meta property="fb:admins" content="103505214345175">
+<meta property="og:type" content="website">

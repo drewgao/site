@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<!--[if lte IE 6]><html class="preIE7 preIE8 preIE9"><![endif]-->
+<!--[if IE 7]><html class="preIE8 preIE9"><![endif]-->
+<!--[if IE 8]><html class="preIE9"><![endif]-->
+<!--[if gte IE 9]><!-->
+<html>
+  <!--<![endif]-->
+
+  <head>
+    {{ partial "head/meta.html" . }}
+
+    {{ partial "head/seo.html" . }}
+
+    <!-- Font Configuration -->
+    <link
+      rel="stylesheet"
+      href="//rsms.me/inter/inter.css"
+      type="text/css"
+      async
+    />
+
+    {{ $reset := resources.Get "global/scss/utils/reset.scss" | toCSS }}
+    {{ $bulma := resources.Get "global/scss/bulma/bulma.sass" | toCSS }}
+    {{ $currentCss := resources.Get "grant/scss/main.scss" | toCSS }}
+  
+    {{ $styles := slice $reset $bulma $currentCss | resources.Concat "grant/css/bundle.css" | postCSS | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}" crossorigin="anonymous" async>
+  </head>
+
+  <body>
+    {{ partial "header/nav.html" . }}
+
+    <section class="hero is-small is-landing is-dark">
+      <div class="hero-body">
+        <div class="container">
+          <p class="title">
+            Travel Grant<img src="/vectors/pig-square.svg" class="logo-grant" />
+          </p>
+          <p class="subtitle">
+            <strong
+              >Event Organizers: Offer Travel Aid to Attendees Without
+              Additional Effort!</strong
+            >
+          </p>
+          <br />
+        </div>
+      </div>
+    </section>
+
+    <!-- Intro Section -->
+    <!-- Letter-styled introduction to the organization's mission. -->
+    <section class="section" id="intro">
+      <div class="container">
+        <h1 class="title">What's Travel Grant?</h1>
+        <div class="section-body">
+          <p>
+            In summer 2018, we organized
+            <a href="https://hackchicago.io" target="_blank">Hack Chicago</a>,
+            the Midwest's largest high school hackathon to-date.
+          </p>
+
+          <p>
+            We're lucky. Since then, we've had the opportunity to experience
+            dozens of fascinating student-run events like
+            <a href="http://hackcincinnati.io/" target="_blank"
+              >Hack Cincinnati</a
+            >, <a href="https://hackpenn.com/" target="_blank">HackPenn</a> and
+            <a href="https://windyhacks.com" target="_blank">Windy City Hacks</a
+            >. But not everyone is that lucky, and not every high school
+            hackathon can afford to provide travel aid.
+          </p>
+
+          <p>
+            <strong
+              >We're here to help. Simply place a link in your FAQ section to
+              our grant website, and you'll be able to provide attendees in need
+              with an opportunity to join you from even across the country.
+            </strong>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- <section class="hero" id="legit">
+      <div class="hero-body">
+        <div class="container">
+          <h1 class="title is-spaced">
+            By students, for students.
+          </h1>
+          <h2 class="subtitle">
+            Travel Grant is funded by a number of student-led high school
+            hackathons with their excess sponsorship after the event. <br />
+            Want to join us on our mission to support more students around the
+            country? Let's
+            <a href="mailto:team@executebig.org">get in touch</a>.
+          </h2>
+          <div class="logos">
+            <a href="https://hackchicago.io"
+              ><img src="/vectors/hackchicago.svg"
+            /></a>
+            <a href="https://hackcincinnati.io"
+              ><img src="/vectors/hackcincinnati.svg"
+            /></a>
+          </div>
+        </div>
+      </div>
+    </section>-->
+
+    <section class="section" id="how">
+      <div class="header container">
+        <h1 class="title">How do I join?</h1>
+        <p class="description">
+          There are only 3 steps to making Travel Grant available for your
+          students. Join the movement, and eliminate geographic constraints of
+          high school hackathons!
+        </p>
+      </div>
+
+      <div class="container" id="steps">
+        <div class="columns is-multiline is-mobile">
+          <div class="column is-one-third-desktop is-full-mobile">
+            <div class="box">
+              <h1 class="title">Link</h1>
+              <p class="step">STEP 1</p>
+              <p>
+                Put a link to <strong>grant.executebig.org</strong> in the FAQ
+                section on your website, informing your attendees about the
+                program, so they don't get scared away from signing up! Simply
+                direct prospective students to us, and we'll handle the rest.
+                <a href="https://pixelhacks.github.io/#faq" target="_blank"
+                  >Here</a
+                >'s an example from PixelHacks' website.
+              </p>
+            </div>
+          </div>
+          <div class="column is-one-third-desktop is-full-mobile">
+            <div class="box">
+              <h1 class="title">Share</h1>
+              <p class="step">STEP 2</p>
+              <p>
+                After our approved students attend your event, they will be
+                asked to complete a reflection in the form of a blog post or a
+                video. Reflections will be shared with you, and you may quote
+                them as you like, so more students can know about Travel Grant
+                and your event.
+              </p>
+            </div>
+          </div>
+          <div class="column is-one-third-desktop is-full-mobile">
+            <div class="box">
+              <h1 class="title">Donate</h1>
+              <p class="step">STEP 3</p>
+              <p>
+                This is not required, but we'd greatly appreciate it if you can
+                donate a portion of your event's leftover funds to us after the
+                event! Travel Grant was made possible by the generous donations
+                of past events, and
+                <strong
+                  >as little as $200 could support an awesome weekend for a
+                  student</strong
+                >!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action & Contact -->
+    <section class="section" id="contact">
+      <div class="header container">
+        <h1 class="title">Ask us anything.</h1>
+        <p class="description">
+          Travel Grant is a charity project — it isn't an attempt to get focus
+          on our organization itself (which runs a completely different
+          program). We want to do something good for the hackathon community
+          that made us who we are today. Please let us know if you have any
+          questions, and we're always happy to help.
+        </p>
+        <div class="columns">
+          <div class="column">
+            <a
+              href="mailto:team@executebig.org"
+              class="button is-large is-action is-inverted is-fullwidth"
+              title="Apply Now"
+              target="_blank"
+              ><i class="far fa-envelope"></i>&ensp;Contact Us</a
+            >
+          </div>
+          <div class="column">
+            <a
+              href="/assets/eb-branding.zip"
+              class="button is-large is-action is-fullwidth"
+              title="Apply Now"
+              target="_blank"
+              ><i class="far fa-file-archive"></i>&ensp;Branding Kit</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ & Information -->
+    <!--<section class="section" id="faq">
+      <div class="container faq-grid">
+        <div class="faq-box">
+          <h2 class="title">Who can apply?</h2>
+          <p class="description">
+            Any middle or high school student in need of travel assistance can
+            apply for Travel Grant. Due to resource limitations, we're not able
+            to provide support for college students.
+          </p>
+        </div>
+        <div class="faq-box">
+          <h2 class="title">How much money do I get?</h2>
+          <p class="description">
+            Enough to cover your round-trip transportation to the event. In
+            certain cases, we might offer partial coverage for your trip, but we
+            will certainly support you to the maximum of our ability.
+          </p>
+        </div>
+      </div>
+    </section>-->
+
+    <section class="section" id="donate">
+      <div class="header container">
+        <h1 class="title">Donate to Travel Grant.</h1>
+        <p class="description">
+          Please consider contributing! Travel Grant was founded on top of the
+          remaining balances after a few early events, and we cannot continue to
+          support more students in need without generous supporters like you!
+          Your event logo will be listed on our website.
+        </p>
+        <div class="columns">
+          <div class="column">
+            <div class="box donation bank">
+              <h1 class="title">
+                Powered by
+                <a href="https://hackclub.com/bank"
+                  ><span class="hcb"
+                    ><img src="/vectors/bank.svg" />Hack Club Bank</span
+                  ></a
+                >?
+              </h1>
+              <div class="box-body">
+                <p>
+                  Same &mdash; and that makes it so much easier! Simply let your
+                  point of contact know that you would like to transfer from
+                  your remaining balance to Execute Big. Your transfer should
+                  not incur another fee, so every cent will be used to support
+                  students in need! Please
+                  <a href="mailto:team@executebig.org">notify us</a> after
+                  you've made the transfer!
+                </p>
+                <a
+                  href="https://bank.hackclub.com/users/auth"
+                  class="button is-large is-action is-fullwidth"
+                  title="Hack Club Bank Log In"
+                  target="_blank"
+                  ><i class="fas fa-sign-in-alt"></i>&ensp;Log In</a
+                >
+                <p class="is-hint">
+                  Not a Hack Club Bank event yet?
+                  <a href="https://hackclub.com/bank" target="_blank">Learn more</a>.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="box donation general">
+              <h1 class="title">
+                Donate Directly
+              </h1>
+              <div class="box-body">
+                <p>
+                  Donation can be paid via credit card. If you are not yet a
+                  tax-exempt organization, your contribution will be
+                  tax-deductible. Execute Big is a 501(c)(3) non-profit fiscally
+                  sponsored by The Hack Foundation, with the EIN 81-2908499.
+                  Please <a href="mailto:team@executebig.org">email us</a> if
+                  you need to pay by check, ACH or wire transfer.
+                </p>
+                <a
+                  href="https://bank.hackclub.com/donations/start/eb"
+                  class="button is-large is-inverted is-action is-fullwidth"
+                  title="Donate via Hack Club Bank"
+                  target="_blank"
+                  ><i class="fas fa-hand-holding-usd"></i>&ensp;Donate Now</a
+                >
+                <p class="is-hint">
+                  7% of your donation will be used to support Hack Club Bank.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="hero" id="sponsors">
+      <div class="hero-body">
+        <div class="container">
+          <h1 class="title">
+            With <span id="event-list-count">?</span> Event Partners And Counting:
+          </h1>
+          <div class="events has-text-centered">
+            <ul id="event-list"></ul>
+            <p class="is-hint">
+              Last updated: <span id="event-list-updated"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {{ partial "footer/footer.html" . }}
+
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+
+    {{ $tracking := resources.Get "global/js/tracking.js" }}
+    {{ $currentJs := resources.Get "grant/js/app.js" }}
+    {{ $events := resources.Get "grant/js/events.js" }}
+    {{ $listEvents := resources.Get "grant/js/listEvents.js" }}
+  
+    {{ $scripts := slice $tracking $currentJs $events $listEvents | resources.Concat "grant/js/bundle.js" | minify | fingerprint }}
+    <script src="{{ $scripts.RelPermalink }}" integrity="{{ $scripts.Data.Integrity }}" crossorigin="anonymous" async></script>
+
+    <script src="https://kit.fontawesome.com/a4f26b881b.js"></script>
+  </body>
+</html>

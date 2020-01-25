@@ -1,0 +1,14 @@
+{
+  "name": "executebig",
+  "version": "1.0.0",
+  "description": "Website for Execute Big, built with Hugo & Bulma.",
+  "repository": "https://github.com/executebig/site",
+  "author": "Mingjie Jiang<jiang@mingjie.info>",
+  "license": "MIT",
+  "dependencies": {
+    "postcss-cli": "^7.1.0"
+  },
+  "scripts": {
+    "build": "hugo"
+  }
+}

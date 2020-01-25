@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<!--[if lte IE 6]><html class="preIE7 preIE8 preIE9"><![endif]-->
+<!--[if IE 7]><html class="preIE8 preIE9"><![endif]-->
+<!--[if IE 8]><html class="preIE9"><![endif]-->
+<!--[if gte IE 9]><!-->
+<html>
+  <!--<![endif]-->
+
+  <head>
+
+    {{ partial "head/meta.html" . }}
+  
+    {{ partial "head/seo.html" . }}
+
+    <!-- Font Configuration -->
+    <link
+      rel="stylesheet"
+      href="//rsms.me/inter/inter.css"
+      type="text/css"
+      async
+    />
+
+    {{ $reset := resources.Get "global/scss/utils/reset.scss" | toCSS }}
+    {{ $bulma := resources.Get "global/scss/bulma/bulma.sass" | toCSS }}
+    {{ $currentCss := resources.Get "grant/scss/main.scss" | toCSS }}
+  
+    {{ $styles := slice $reset $bulma $currentCss | resources.Concat "grant/css/bundle.css" | postCSS | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}" crossorigin="anonymous" async>
+  </head>
+
+  <body>
+    {{ partial "header/nav.html" . }}
+
+    <section class="hero is-medium is-landing is-dark">
+      <div class="hero-body">
+        <div class="container">
+          <p class="title">
+            Travel Grant<img src="/vectors/pig-square.svg" class="logo-grant" />
+          </p>
+          <p class="subtitle">
+            A scholarship awarded to passionate high school hackers in need,
+            giving them the opportunity to attend the best high school
+            hackathons.
+          </p>
+          <div class="columns">
+            <div class="column"></div>
+            <div class="column is-one-third">
+              <a class="button is-action is-large is-fullwidth" href="#contact"
+                ><i class="far fa-calendar-check"></i>&ensp;Apply Now</a
+              >
+            </div>
+            <div class="column is-one-third">
+              <a
+                class="button is-action is-large is-fullwidth"
+                href="/grant/organizers"
+                ><i class="far fa-id-badge"></i>&ensp;Organizer Resources</a
+              >
+            </div>
+            
+            <div class="column"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Intro Section -->
+    <!-- Letter-styled introduction to the organization's mission. -->
+    <section class="section" id="intro">
+      <div class="container">
+        <h1 class="title">Here's the story.</h1>
+        <div class="section-body">
+          <p>
+            In summer 2018, we organized
+            <a href="https://hackchicago.io" target="_blank">Hack Chicago</a>,
+            the Midwest's largest high school hackathon to-date.
+          </p>
+
+          <p>
+            We're lucky. Since then, we've had the opportunity to experience
+            dozens of fascinating student-run events like
+            <a href="http://hackcincinnati.io/" target="_blank"
+              >Hack Cincinnati</a
+            >, <a href="https://hackpenn.com/" target="_blank">HackPenn</a> and
+            <a href="https://windyhacks.com" target="_blank">Windy City Hacks</a
+            >. But not everyone is that lucky, and not every high school
+            hackathon can afford to provide travel aid.
+          </p>
+
+          <p>
+            <strong
+              >We're here to help. Fill out an application, tell us your story,
+              and we'll cover your travel expenses to get you to the best high
+              school hackathons in the nation.</strong
+            >
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="hero" id="legit">
+      <div class="hero-body">
+        <div class="container">
+          <h1 class="title is-spaced">
+            By students, for students.
+          </h1>
+          <h2 class="subtitle">
+            Travel Grant is funded by a number of student-led high school
+            hackathons with their excess sponsorship after the event. <br />
+            Want to join us on our mission to support more students around the
+            country? Let's
+            <a href="mailto:team@executebig.org">get in touch</a>.
+          </h2>
+          <div class="logos">
+            <a href="https://hackchicago.io"
+              ><img src="/vectors/hackchicago.svg"
+            /></a>
+            <a href="https://hackcincinnati.io"
+              ><img src="/vectors/hackcincinnati.svg"
+            /></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="how">
+      <div class="header container">
+        <h1 class="title">How does it work?</h1>
+        <p class="description">
+          There are only 4 steps to Travel Grant. You're only moments away from
+          an amazing hackathon experience!
+        </p>
+      </div>
+
+      <div class="container" id="steps">
+        <div class="columns is-multiline is-mobile">
+          <div
+            class="column is-one-quarter-desktop is-half-tablet is-full-mobile"
+          >
+            <div class="box">
+              <h1 class="title">Apply</h1>
+              <p class="step">STEP 1</p>
+              <p>
+                Submit your application, and convince us that it's worth sending
+                you on a trip to an amazing event! Take your time — applications
+                are approved on a rolling basis.
+              </p>
+            </div>
+          </div>
+          <div
+            class="column is-one-quarter-desktop is-half-tablet is-full-mobile"
+          >
+            <div class="box">
+              <h1 class="title">Chat</h1>
+              <p class="step">STEP 2</p>
+              <p>
+                Join one of our directors for a short interview, so we can learn
+                more about who you really are beyond your written application.
+                And feel free to ask us anything!
+              </p>
+            </div>
+          </div>
+          <div
+            class="column is-one-quarter-desktop is-half-tablet is-full-mobile"
+          >
+            <div class="box">
+              <h1 class="title">Hack</h1>
+              <p class="step">STEP 3</p>
+              <p>
+                Once you're approved, you can then book your travel, and attend
+                the event of your choice! Hack away, make new friends, and be
+                sure to take lots of pictures.
+              </p>
+            </div>
+          </div>
+          <div
+            class="column is-one-quarter-desktop is-half-tablet is-full-mobile"
+          >
+            <div class="box">
+              <h1 class="title">Share</h1>
+              <p class="step">STEP 4</p>
+              <p>
+                Share your event experience with us and your event organizers in
+                the form of a blog or a video, so we can provide this experience
+                to even more students!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action & Contact -->
+    <section class="section" id="contact">
+      <div class="header container">
+        <h1 class="title">Apply now.</h1>
+        <p class="description">
+          There're no restrictions, no prerequisites, and no complicated forms.
+          Answer a few questions, give us some time to review, and you'll be on
+          your way to one of the best weekends of your life.
+        </p>
+        <div class="columns">
+          <div class="column has-text-centered">
+            <a
+              href="/grant/apply"
+              class="button is-large is-action is-inverted is-fullwidth"
+              title="Apply Now"
+              target="_blank"
+              ><i class="far fa-calendar-check"></i>&ensp;Fill out the
+              application</a
+            >
+            <p class="is-hint">
+              We typically respond to applications within 3 days.
+            </p>
+            <p></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ & Information -->
+    <section class="section" id="faq">
+      <div class="container faq-grid">
+        <div class="faq-box">
+          <h2 class="title">Who can apply?</h2>
+          <p class="description">
+            Any middle or high school student in need of travel assistance can
+            apply for Travel Grant. Due to resource limitations, we're not able
+            to provide support for college students.
+          </p>
+        </div>
+        <div class="faq-box">
+          <h2 class="title">How much money do I get?</h2>
+          <p class="description">
+            Enough to cover your round-trip transportation to the event. In
+            certain cases, we might offer partial coverage for your trip, but we
+            will certainly support you to the maximum of our ability.
+          </p>
+        </div>
+        <div class="faq-box">
+          <h2 class="title">How do I write my application?</h2>
+          <p class="description">
+            <strong>Be creative.</strong> You're not writing a college
+            application. We're really curious to learn some interesting facts
+            about you that we can't find elsewhere. Be specific: "I am
+            passionate about coding" does not tell your story! But still keep
+            your responses brief — generally under 350 words.
+          </p>
+        </div>
+        <div class="faq-box">
+          <h2 class="title">Can I apply to multiple events?</h2>
+          <p class="description">
+            If you have multiple events in mind, you should only submit
+            <strong>one</strong> application to the event that you want to
+            attend the most. During the interview, let us know that you're
+            considering other events, and we'll evaluate these choices with you.
+            <strong
+              >We are only able to support one event per student at a
+              time.</strong
+            >
+          </p>
+        </div>
+        <div class="faq-box">
+          <h2 class="title">How will I book my travel?</h2>
+          <p class="description">
+            Once you're accepted, you will be responsible for booking travel
+            yourself (we'll send you the terms upon acceptance). We'll reimburse
+            the cost after the event. If you can't front the money, let us know,
+            and we'll book the travel for you.
+          </p>
+        </div>
+        <div class="faq-box">
+          <h2 class="title">Why is there an interview?</h2>
+          <p class="description">
+            Don't be stressed out about the interview! We just want to chat with
+            you to get to know you better before we make our final call.
+            Afterall, we need to make sure we're using our limited resources to
+            support a real student!
+          </p>
+        </div>
+        <div class="faq-box">
+          <h2 class="title">How early should I apply?</h2>
+          <p class="description">
+            At least 4-5 weeks before the event. To try to provide support for
+            as many students as we possibly can, we tend to avoid booking travel
+            on short notice. However, if your transportation cost does not
+            increase with time — train, bus, etc., you may apply slight later.
+            You can always fill out your application as early as you wish!
+          </p>
+        </div>
+        <div class="faq-box">
+          <h2 class="title">When will I receive the grant?</h2>
+          <p class="description">
+            After the event, we will ask you to submit some form of reflection
+            to us. The reflection can be in the form of a blog post, a video, a
+            collection of pictures, and your project. The reflection will be
+            shared with the event team, and we'll reimburse you via check as
+            soon as we receive the reflection.
+          </p>
+        </div>
+        <div class="faq-box">
+          <h2 class="title">Which events can I go to?</h2>
+          <p class="description">
+            Any high school hackathon that you're admitted to. Check with the
+            hackathon first — they might be able to cover your travel already!
+          </p>
+        </div>
+        <div class="faq-box">
+          <h2 class="title">I have more questions...</h2>
+          <p class="description">
+            Shoot us an email!
+            <a href="mailto:team@executebig.org">team@executebig.org</a> is the
+            best address to reach us.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="hero" id="sponsors">
+      <div class="hero-body">
+        <div class="container">
+          <h1 class="title">
+            Additional Support Provided By
+          </h1>
+          <div class="logos">
+            <a href="https://www.stickermule.com/" target="_blank"
+              ><img src="/vectors/sticker-mule.svg"
+            /></a>
+            <a href="https://hackclub.com/bank" target="_blank"
+              ><img class="large" src="/vectors/hcb.svg"
+            /></a>
+            <a href="https://hotjar.com/" target="_blank"
+              ><img src="/vectors/hotjar.svg"
+            /></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {{ partial "footer/footer.html" . }}
+
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+
+    {{ $tracking := resources.Get "global/js/tracking.js" }}
+    {{ $currentJs := resources.Get "grant/js/app.js" }}
+    {{ $drift := resources.Get "grant/js/drift.js" }}
+  
+    {{ $scripts := slice $tracking $currentJs $drift | resources.Concat "grant/js/bundle.js" | minify | fingerprint }}
+    <script src="{{ $scripts.RelPermalink }}" integrity="{{ $scripts.Data.Integrity }}" crossorigin="anonymous" async></script>
+
+    <script src="https://kit.fontawesome.com/a4f26b881b.js"></script>
+  </body>
+</html>

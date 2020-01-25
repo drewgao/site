@@ -1,0 +1,21 @@
+{
+  "name": "site",
+  "scope": "executebig",
+  "routes": [
+    {
+      "handle": "filesystem"
+    },
+    {
+      "src": "/.*",
+      "dest": "/404.html",
+      "status": 404
+    },
+    {
+      "src": "/grant/apply",
+      "status": 302,
+      "headers": {
+        "Location": "https://airtable.com/shrDejG7ussMpBTqJ"
+      }
+    }
+  ]
+}
