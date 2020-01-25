@@ -7,11 +7,11 @@ Website for [Execute Big](https://executebig.org), built with Hugo & Bulma. Now 
 ## Developing
 
 1. Install [Hugo](https://gohugo.io/getting-started/installing/)
-1. Install dependencies
+2. Install dependencies
 ```bash
 $ yarn
 ```
-1. Run local server
+3. Run local server
 ```bash
 $ hugo server
 ```
