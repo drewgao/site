@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<!--[if lte IE 6]><html class="preIE7 preIE8 preIE9"><![endif]-->
+<!--[if IE 7]><html class="preIE8 preIE9"><![endif]-->
+<!--[if IE 8]><html class="preIE9"><![endif]-->
+<!--[if gte IE 9]><!-->
+<html>
+<!--<![endif]-->
+
+<head>
+
+  {{ partial "head/meta.html" . }}
+
+  {{ partial "head/seo.html" . }}
+
+  {{ partial "head/schema.html" . }}
+
+  <!-- Font Configuration -->
+  <link rel="stylesheet" href="//rsms.me/inter/inter.css" type="text/css" async>
+
+  {{ $reset := resources.Get "global/scss/utils/reset.scss" | toCSS }}
+  {{ $bulma := resources.Get "global/scss/bulma/bulma.sass" | toCSS }}
+  {{ $globalScss := resources.Get "global/scss/global.scss" | toCSS }}
+  {{ $currentCss := resources.Get "events/scss/main.scss" | toCSS }}
+  {{ $lity := resources.Get "events/css/lity.min.css" }}
+
+  {{ $styles := slice $reset $bulma $globalScss $currentCss $lity | resources.Concat "events/css/bundle.css" | postCSS | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}" crossorigin="anonymous" async>
+</head>
+
+<body>
+
+  {{ partial "header/nav.html" . }}
+
+  <section class="hero is-medium is-landing is-dark">
+    <div class="hero-body">
+      <div class="container">
+        <p class="title">
+          <h1 style="display: none">Execute Big</h1>
+          <img src="/vectors/logo-white.svg" alt="Execute Big Logo" width="300" id="top-logo">
+        </p>
+        <p class="subtitle">
+          We've organized <strong>innovative, purpose-driven</strong> events impacting thousands of students.
+        </p>
+        <p class="subtitle">
+          <strong>We want to help schools like yours to start your own.</strong>
+        </p>
+        <a href="https://vimeo.com/285996919" class="button is-medium is-action is-inverted"
+          title="Play Hack Chicago 2018 Recap Video" data-lity>What do our events look like?</a>
+        <a href="https://gilmour.executebig.org" class="button is-medium is-action" title="Hacks Academy" target="_blank">Upcoming: Hacks Academy</a>
+        <!--
+        <p class="is-disclaim is-hint"><small>Execute Big is an independant subsidiary of The Hack Foundation, a
+            501(c)(3) non-profit organization.</small></p>-->
+
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Intro Section -->
+  <!-- Letter-styled introduction to the organization's mission. -->
+  <section class="section" id="intro">
+    <div class="container">
+      <h2 class="title">We know what it takes to build a stellar innovation program from ground up.
+      </h2>
+      <div class="section-body">
+        <p>As high schoolers, we were lucky enough to experience the magic of hackathons.</p>
+
+        <p>We went on to run our own programs for our communities, build platforms for our schools, blog profusely about
+          our stories, and share similar stories on a national stage.</p>
+
+        <p><strong>We want to work with you to give your students a story of their own to tell.</strong></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Events Section -->
+  <!-- Showcase & pictures of past events. -->
+  <!--
+  <section class="section" id="impact">
+
+    <div class="container">
+      <div class="columns">
+        <div class="column">
+          <div class="container header">
+            <h1 class="title">Great programs changed students' lives.</h1>
+            <h3 class="subtitle">We ran some of the largest and most impactful events in the past few years. Yours can
+              be the next.</h3>
+          </div>
+          <br />
+          <div class="testimony">
+            <p class="testimony-content">
+              <img class="quotes" src="/vectors/quotes.svg" />
+              Jibbidy dabbidy doo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit
+              amet massa fringilla egestas. Nullam condimentum luctus turpis.
+            </p>
+            <article class="media">
+              <div class="media-left">
+                <figure class="image is-64x64">
+                  <img src="/img/testimony/latta.jpg" class="avatar" alt="Zach Latta">
+                </figure>
+              </div>
+              <div class="media-content">
+                <div class="content">
+                  <strong>Zach Latta</strong> <small>@zrl</small><br />
+                  <p class="is-hint">Founder, Hack Club</p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="column">
+          <a href="/img/feature/chicagohacks_zach.jpg" data-lity>
+            <img class="featured" src="/img/feature/chicagohacks_zach.jpg">
+          </a>
+          <p class="is-hint">
+            Zach Latta at Chicago Hacks 2017
+            <span class="is-pulled-right">&copy; Stan Golovchuk</span></p>
+        </div>
+      </div>
+  </section>
+-->
+
+  <section class="section" id="events">
+    <div class="container gallery">
+      <h2 class="title is-spaced">
+        We create impact.
+      </h2>
+      <h2 class="subtitle">
+        Our events have reached <strong>1,000+</strong> students across the country.
+      </h2>
+      <div class="columns is-multiline">
+        <div class="column is-one-third-desktop is-half-tablet">
+          <a href="/img/feature/chicagohacks.jpg" alt="Chicago Hacks 2017" data-lity>
+            <div class="card">
+              <div class="card-image">
+                <figure class="image is-3by2">
+                  <img src="/img/feature/min/chicagohacks.jpg">
+                </figure>
+                <div class="card-content is-overlay is-clipped">
+                  <span class="tag is-dark is-small">
+                    Chicago Hacks 2017
+                  </span>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="column is-one-third-desktop is-half-tablet">
+          <a href="https://vimeo.com/285996919" data-lity>
+            <div class="card">
+              <div class="card-image">
+                <figure class="image is-3by2">
+                  <img src="/img/feature/min/hackchicago.jpg" alt="Hack Chicago 2018">
+                </figure>
+                <div class="card-content is-overlay is-clipped">
+                  <span class="tag is-dark is-small">
+                    Hack Chicago 2018
+                  </span>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="column is-one-third-desktop is-half-tablet">
+          <a href="/img/feature/mcdonogh.jpg" data-lity>
+            <div class="card">
+              <div class="card-image">
+                <figure class="image is-3by2">
+                  <img src="/img/feature/min/mcdonogh.jpg" alt="McDonogh Hacks 2018">
+                </figure>
+                <div class="card-content is-overlay is-clipped">
+                  <span class="tag is-dark is-small">
+                    McDonogh Hacks 2018
+                  </span>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="column is-one-third-desktop is-half-tablet">
+          <a href="/img/feature/codedaydc_f18.jpg" data-lity>
+            <div class="card">
+              <div class="card-image">
+                <figure class="image is-3by2">
+                  <img src="/img/feature/min/codedaydc_f18.jpg" alt="CodeDay DC Fall 2018">
+                </figure>
+                <div class="card-content is-overlay is-clipped">
+                  <span class="tag is-dark is-small">
+                    CodeDay DC Fall 2018
+                  </span>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="column is-one-third-desktop is-half-tablet">
+          <a href="https://youtu.be/lALda1GhMWw" data-lity>
+            <div class="card">
+              <div class="card-image">
+                <figure class="image is-3by2">
+                  <img src="/img/feature/min/hackcincinnati.jpg" alt="Hack Cincinnati 2019">
+                </figure>
+                <div class="card-content is-overlay is-clipped">
+                  <span class="tag is-dark is-small">
+                    Hack Cincinnati 2019
+                  </span>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="column is-one-third-desktop is-half-tablet">
+          <a href="/img/feature/codedaydc_w19.jpg" data-lity>
+            <div class="card">
+              <div class="card-image">
+                <figure class="image is-3by2">
+                  <img src="/img/feature/min/codedaydc_w19.jpg" alt="CodeDay DC Winter 2019">
+                </figure>
+                <div class="card-content is-overlay is-clipped">
+                  <span class="tag is-dark is-small">
+                    CodeDay DC Winter 2019
+                  </span>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Team Bio Section -->
+  <section class="section" id="team">
+    <div class="container">
+      <div class="header">
+        <h2 class="title">Meet The Leaders.</h2>
+        <p class="description">Execute Big is founded by 3 experienced event organizers from 3 unique cities.
+          Together, we bring insights from around the nation to help run successful programs in your region.</p>
+      </div>
+
+      <div class="profiles columns">
+        <div class="column">
+          <div class="box">
+            <article class="media profile">
+              <div class="media-left">
+                <figure class="image">
+                  <img src="/img/team/megan.jpg" alt="Megan Cui">
+                </figure>
+              </div>
+              <div class="media-content">
+                <div class="content meta">
+                  <strong class="name">Megan<br />Cui</strong><br />
+                  <p class="is-hint">Harvard University</p>
+                  <p class="is-hint">Cincinnati, Ohio</p>
+                </div>
+              </div>
+            </article>
+
+            <p>Megan made hackathons in the greater Cincinnati region the next big thing, running five hackathons of her
+              own including the Midwest’s largest and Cincinnati’s first. Along with her programs, she has
+              impacted 1000+ students across her community, receiving <a
+                href="https://www.inverse.com/article/47485-young-innovators-megan-cui-hackathon">national media
+                coverage</a> and invitations to speak
+              at corporate and community <a href="https://youtu.be/OxtZvyCA1DE">events</a>.</p>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="box">
+            <article class="media profile">
+              <div class="media-left">
+                <figure class="image">
+                  <img src="/img/team/mingjie.jpg" alt="Mingjie Jiang">
+                </figure>
+              </div>
+              <div class="media-content">
+                <div class="content meta">
+                  <strong class="name">Mingjie<br />Jiang</strong><br />
+                  <p class="is-hint">Thomas Wootton HS</p>
+                  <p class="is-hint">Washington, DC</p>
+                </div>
+              </div>
+            </article>
+
+            <p>Mingjie started a series of beginner-oriented hackathons in the Washington D.C. area.
+              As a part of the <a href="https://hackclub.com/">Hack Club</a> core team, he has also mentored student
+              leaders across the nation,
+              helping them start their own events in 7 different states. Some of the <a
+                href="https://mingjie.info/#experience">events</a> that he has worked
+              with are now some
+              of the largest and most
+              successful in the nation.</p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="box">
+            <article class="media profile">
+              <div class="media-left">
+                <figure class="image">
+                  <img src="/img/team/sean.jpg" alt="Sean Kim">
+                </figure>
+              </div>
+              <div class="media-content">
+                <div class="content meta">
+                  <strong class="name">Sean<br />Kim</strong><br />
+                  <p class="is-hint">U. of Illinois at Chicago</p>
+                  <p class="is-hint">Chicago, Illinois</p>
+                </div>
+              </div>
+            </article>
+
+            <p>Sean helped kickstarting the high school hackathon community in the Midwest by starting his own. As the
+              founder and director of some of most impactful events in the region, including
+              <a href="https://chicagohacks.tech">Chicago Hacks</a>, <a href="https://code211.org/">Code211</a>, and <a
+                href="https://hackchicago.io/">Hack Chicago</a>, he has continuously been impacting hundreds of high
+              school students' lives
+              from around the Midwest.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sponsor Showcase -->
+  <!--
+  <section class="hero" id="legit">
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title is-spaced">
+          We are legit.
+        </h1>
+        <h2 class="subtitle">
+          We've gotten over <strong>$125,000</strong> of support for our events from the biggest names across the world.
+        </h2>
+
+        <div class="logos">
+          <img src="/img/companies/mcdonalds.png">
+          <img src="/img/companies/nvidia.png">
+          <img src="/img/companies/medium.png">
+          <img src="/img/companies/cengage.png">
+          <img src="/img/companies/amazon.png">
+          <img src="/img/companies/bose.png">
+        </div>
+
+        <div class="logos">
+          <img src="/img/companies/morningstar.png">
+          <img src="/img/companies/fifththird.png">
+          <img src="/img/companies/tastyworks2.png">
+          <img src="/img/companies/github.png">
+          <img src="/img/companies/discord.png">
+        </div>
+      </div>
+    </div>
+  </section>
+  -->
+
+  <!-- Call to Action & Contact -->
+  <section class="section" id="contact">
+
+    <div class="header container">
+      <h2 class="title">Work with us.</h2>
+      <p class="description">We know that fostering creativity and innovation at a young age sets the priceless
+        foundation for student empowerment and success. We’ve already reached thousands of students, but we need
+        <strong>your partnership</strong> to continue creating life-changing experiences.</p>
+      <p class="description"><strong>With our help, you can be a pioneer in the field of education.</strong></p>
+      <div class="columns">
+        <div class="column">
+          <a href="https://forms.gle/mgncUxpV21w59jNk7" class="button is-large is-action is-inverted is-fullwidth"
+            title="Consultation Request Form"><i class="far fa-calendar-check"></i>&ensp;Request
+            Consultation</a>
+          <p class="is-hint has-text-centered">We'll get in touch with you for a free consultation
+            meeting to discuss
+            your needs.</p>
+        </div>
+        <div class="column">
+          <a href="/media/portfolio.pdf" class="button is-large is-action is-fullwidth" title="View Portfolio"
+            target="_blank"><i class="far fa-file-pdf"></i>&ensp;Event Portfolio</a>
+          <p class="is-hint has-text-centered">Read about the events that we've organized in the past.</p>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- FAQ & Information -->
+  <section class="section" id="faq">
+
+    <div class="container faq-grid">
+
+      <div class="faq-box">
+        <h2 class="title">What's the cost?</h2>
+        <p class="description">
+          For each event, we charge a set amount to reimburse our team of event organizers as well as an extra 7% to
+          support the
+          operation of <a href="https://hackclub.com">Hack Club</a>, our parent program. </p>
+      </div>
+      <div class="faq-box">
+        <h2 class="title">What is “hacking”?</h2>
+        <p class="description">No, we’re not “hacking” servers or databases. The word is being constructively
+          re-defined
+          as building things—apps, games, websites, etc. </p>
+      </div>
+      <div class="faq-box">
+        <h2 class="title">How are we non-profit?</h2>
+        <p class="description">Execute Big is a subsidiary of a non-profit organization. The team only receives a fair
+          compensation for their contribution, and the rest is passed on as a donation to the
+          organization.</p>
+      </div>
+      <div class="faq-box">
+        <h2 class="title">Got more questions?</h2>
+        <p class="description">We're more than happy to help out. We can be reached via email at <a
+            href="mailto:team@executebig.org">team@executebig.org</a>. You can schedule a call with us when you are
+          next available via email as well.</p>
+      </div>
+    </div>
+
+  </section>
+
+  <section class="hero is-eb" id="grant">
+    <div class="hero-body">
+      <div class="container">
+        <div class="columns is-desktop">
+          <div class="column is-four-fifths left-feature">
+            <h1 class="title">
+              <strong>Travel Grant</strong>: superpower for students in need.
+            </h1>
+            <h2 class="subtitle">
+              We created a scholarship awarded to passionate high school hackers, giving them the opportunity to attend
+              the best high school hackathons. Application opens today.
+            </h2>
+          </div>
+          <div class="column button-feature">
+            <a href="/grant" class="button is-large is-action"
+              title="Travel Grant by Execute Big"><i class="fas fa-globe-americas"></i>&emsp;Learn More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {{ partial "footer/footer.html" . }}
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+  {{ $tracking := resources.Get "global/js/tracking.js" }}
+  {{ $globalJs := resources.Get "global/js/global.js" }}
+  {{ $currentJs := resources.Get "events/js/app.js" }}
+  {{ $lityJs := resources.Get "events/js/lity.js" }}
+
+  {{ $scripts := slice $tracking $globalJs $currentJs $lityJs | resources.Concat "events/js/bundle.js" | minify | fingerprint }}
+  <script src="{{ $scripts.RelPermalink }}" integrity="{{ $scripts.Data.Integrity }}" crossorigin="anonymous" async></script>
+
+  <script src="https://kit.fontawesome.com/a4f26b881b.js" async></script>
+</body>
+
+</html>

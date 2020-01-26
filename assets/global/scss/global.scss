@@ -1,0 +1,67 @@
+body,
+button,
+input,
+select,
+textarea {
+  font-family: "Inter", sans-serif !important;
+}
+
+::selection {
+  background: #266dd3;
+  color: #fff;
+  /* WebKit/Blink Browsers */
+}
+
+::-moz-selection {
+  background: #266dd3;
+  color: #fff;
+  /* Gecko Browsers */
+}
+
+.is-eb {
+  background-color: #266dd3;
+
+  .title,
+  .subtitle {
+    color: #fff;
+  }
+}
+
+.is-branding {
+  font-weight: 800 !important;
+}
+
+.navbar {
+  &.is-eb {
+    background-color: #266dd3;
+
+    .navbar-burger {
+      color: #fff;
+    }
+
+    @media screen and (max-width: 1023px) {
+      .navbar-menu {
+        background-color: #266dd3;
+
+        .navbar-item {
+          background-color: #266dd3;
+        }
+      }
+    }
+
+    .navbar-item {
+      color: #fff;
+      transition: all 0.1875s cubic-bezier(0.375, 0, 0.675, 1) 0s;
+
+      &.is-active {
+        font-weight: 600;
+      }
+
+      &:hover,
+      &:focus {
+        background-color: #266dd3;
+        color: #ddd;
+      }
+    }
+  }
+}

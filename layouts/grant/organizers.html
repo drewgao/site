@@ -21,9 +21,10 @@
 
     {{ $reset := resources.Get "global/scss/utils/reset.scss" | toCSS }}
     {{ $bulma := resources.Get "global/scss/bulma/bulma.sass" | toCSS }}
+    {{ $globalScss := resources.Get "global/scss/global.scss" | toCSS }}
     {{ $currentCss := resources.Get "grant/scss/main.scss" | toCSS }}
   
-    {{ $styles := slice $reset $bulma $currentCss | resources.Concat "grant/css/bundle.css" | postCSS | minify | fingerprint }}
+    {{ $styles := slice $reset $bulma $globalScss $currentCss | resources.Concat "grant/css/bundle.css" | postCSS | minify | fingerprint }}
     <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}" crossorigin="anonymous" async>
   </head>
 
@@ -322,11 +323,12 @@
     ></script>
 
     {{ $tracking := resources.Get "global/js/tracking.js" }}
+    {{ $globalJs := resources.Get "global/js/global.js" }}
     {{ $currentJs := resources.Get "grant/js/app.js" }}
     {{ $events := resources.Get "grant/js/events.js" }}
     {{ $listEvents := resources.Get "grant/js/listEvents.js" }}
   
-    {{ $scripts := slice $tracking $currentJs $events $listEvents | resources.Concat "grant/js/bundle.js" | minify | fingerprint }}
+    {{ $scripts := slice $tracking $globalJs $currentJs $events $listEvents | resources.Concat "grant/js/bundle.js" | minify | fingerprint }}
     <script src="{{ $scripts.RelPermalink }}" integrity="{{ $scripts.Data.Integrity }}" crossorigin="anonymous" async></script>
 
     <script src="https://kit.fontawesome.com/a4f26b881b.js"></script>
