@@ -1,8 +1,8 @@
-<nav class="navbar is-eb">
+<nav class="navbar{{ if not (eq .Type "home") }} is-eb{{ end }}">
   <div class="navbar-brand">
     <a class="navbar-item" href="/">
       <img
-        src="/img/logo-square-invert.png"
+        src="/vectors/pig-square.svg"
         alt="Execute Big Logo"
         height="28"
       />
@@ -19,9 +19,16 @@
       <a class="navbar-item{{ if eq .Type "home" }} is-active{{ end }}" href="/">
         Home
       </a>
-      <a class="navbar-item{{ if eq .Type "grant" }} is-active{{ end }}" href="/grant">
-        Travel Grant
+      <a class="navbar-item{{ if eq .Type "events" }} is-active{{ end }}" href="/events">
+        Events
       </a>
+      <a class="navbar-item{{ if eq .Type "grant" }} is-active{{ end }}" href="/grant">
+        Grant
+      </a>
+      <!--
+      <a class="navbar-item{{ if eq .Type "advising" }} is-active{{ end }}" href="/advising">
+        Advising
+      </a>-->
     </div>
   </div>
 </nav>
