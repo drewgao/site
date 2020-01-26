@@ -31,6 +31,7 @@ document.getElementById("landing-vid").addEventListener(
   function() {
     this.currentTime = 2;
     this.style.filter = "brightness(50%) blur(5px)";
+    console.log("Done")
   },
   false
 );
