@@ -53,3 +53,7 @@ nav.navbar {
     transition: all 3s ease-in-out;
   }
 }
+
+#top-logo {
+  filter: drop-shadow(0 1px 4px rgba(0, 0, 0, 0.375));
+}
