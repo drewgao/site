@@ -1,6 +1,6 @@
 ---
 type: advising
-layout: single
+layout: advising
 
 title: Organizer Advising | Execute Big
 description: A free, selective advising resource supporting talented student hackathon organizers all around the world. By students, for students.

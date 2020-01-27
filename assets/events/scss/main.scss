@@ -1,71 +1,11 @@
-.hero {
-  &.is-landing {
-    background: none !important;
-    background-position: center;
-    background-attachment: fixed;
-    background-size: cover;
+.hero.is-landing {
+  .hero-body {
+    background-color: #266dd3;
 
-    text-align: center;
-
-    .hero-body {
-      position: relative;
-      overflow: hidden;
-      background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url('/img/feature/wall.jpg') center;
+    .hero-bg {
+      background: linear-gradient(rgba(38, 109, 211, 1), rgba(38, 109, 211, 1), rgba(38, 109, 211, .3), rgba(0, 0, 0, 0.5)),
+      url("/img/feature/min/hackchicago.jpg") center;
       background-size: cover;
-
-
-      .container {
-        margin-top: 4rem;
-
-        a.button {
-          margin: 20px;
-        }
-
-        @media screen and (max-width: 32em) {
-          margin-top: 3rem;
-
-          p {
-            font-size: 1.25rem;
-          }
-
-          #top-logo {
-            width: 200px;
-            margin-bottom: 20px;
-          }
-
-          a.button {
-            font-size: 1rem;
-          }
-        }
-      }
-    }
-
-    .title {
-      font-size: 5rem;
-      margin-bottom: 3rem;
-    }
-
-    .subtitle {
-      font-size: 2rem;
-      line-height: 1.6;
-      margin: auto;
-
-      @media screen and (max-width: 32em) {
-        font-size: 1.5rem;
-      }
-
-      strong {
-        text-shadow: rgb(0, 0, 0) 0px 1px 4px;
-        font-weight: 700;
-      }
-
-      &.play {
-        margin: 15px;
-      }
-    }
-
-    .is-disclaim {
-      margin-top: 0.5rem;
     }
   }
 }
@@ -407,31 +347,6 @@ a.button {
         line-height: 1.675;
       }
     }
-  }
-}
-
-footer.footer {
-  padding: 3rem 1.5rem 3rem;
-  background: url(/vectors/pattern.svg) repeat rgb(249, 249, 250);
-
-  img.is-tiny {
-    height: 50px;
-
-    &.is-pig {
-      margin-bottom: 15px;
-    }
-  }
-
-  hr.is-tiny {
-    width: 30px;
-    height: 1.1px;
-    margin: 12px auto;
-    background-color: #7a8c97;
-  }
-
-  .is-footer-head {
-    font-size: 1.3rem;
-    margin-bottom: 0 !important;
   }
 }
 

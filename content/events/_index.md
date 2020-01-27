@@ -1,6 +1,6 @@
 ---
 type: events
-layout: single
+layout: events
 
 title: Events | Execute Big
 description: We've organized innovative, purpose-driven events impacting thousands of students. We want to help schools like yours to start your own.

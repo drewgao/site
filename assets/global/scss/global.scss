@@ -65,3 +65,151 @@ textarea {
     }
   }
 }
+
+.hero {
+  &.is-landing {
+    background: none !important;
+    position: relative;
+    text-align: center;
+
+    .hero-body {
+      position: relative;
+      overflow: hidden;
+
+      .hero-bg {
+        position: absolute;
+        left: 0;
+        top: -9rem;
+        width: 102%;
+        height: calc(100% + 9rem);
+        filter: blur(8px);
+        transform: scale(1.1);
+        overflow: hidden;
+        opacity: .8;
+      }
+
+      .container {
+        margin-top: 3rem;
+
+        @media screen and (max-width: 32em) {
+          margin-top: 3rem;
+        }
+
+        a.button {
+          margin: 20px;
+        }
+      }
+    }
+
+    p.credit {
+      position: absolute;
+      width: 100%;
+      text-align: center;
+      left: 0;
+      bottom: 5px;
+      opacity: .5;
+      font-size: .7rem;
+    }
+
+    .title {
+      font-size: 5rem;
+      margin-bottom: 3rem;
+      font-weight: 800;
+    }
+
+    .subtitle {
+      font-size: 2rem;
+      line-height: 1.8;
+      margin: auto;
+      margin-bottom: 10px;
+
+      a {
+        text-decoration: underline;
+      }
+
+      @media screen and (max-width: 32em) {
+        font-size: 1.5rem;
+      }
+
+      strong {
+        font-weight: 700;
+      }
+
+      &.play {
+        margin: 15px;
+      }
+
+      &.is-hint {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-top: 15px;
+
+        @media screen and (max-width: 32em) {
+          font-size: 1rem;
+        }
+      }
+    }
+
+    
+  }
+}
+
+
+.logo-float {
+  width: 50px;
+  padding-bottom: 30px;
+  margin-left: 10px;
+  animation: float 3s ease-in-out infinite;
+  cursor: pointer;
+
+  @media screen and (max-width: 595px) {
+    display: none;
+  }
+
+  &:hover {
+    animation-play-state: paused;
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(-20px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
+}
+
+
+footer.footer {
+  padding: 3rem 1.5rem 3rem;
+  background: url(/vectors/pattern.svg) repeat rgb(249, 249, 250);
+
+  &.form-page {
+    background: #fff;
+    padding-top: 0;
+  }
+
+  img.is-tiny {
+    height: 50px;
+
+    &.is-pig {
+      margin-bottom: 15px;
+    }
+  }
+
+  hr.is-tiny {
+    width: 30px;
+    height: 1.1px;
+    margin: 12px auto;
+    background-color: #7a8c97;
+  }
+
+  .is-footer-head {
+    font-size: 1.3rem;
+    margin-bottom: 0 !important;
+  }
+}
