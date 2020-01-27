@@ -10,47 +10,6 @@
   }
 }
 
-a.button {
-  font-weight: bold;
-  line-height: 1.125;
-  -webkit-appearance: none;
-  cursor: pointer;
-  will-change: transform;
-  transform: scale(1);
-  border-width: initial;
-  border-style: none;
-  border-color: initial;
-  border-image: initial;
-  font-family: inherit;
-  box-shadow: rgba(0, 0, 0, 0.125) 0px 2px 12px;
-
-  &.is-large {
-    border-radius: 6px;
-    padding-left: 24px;
-    padding-right: 24px;
-    padding-top: 18px;
-    padding-bottom: 18px;
-    font-size: 24px;
-  }
-
-  &.is-action {
-    color: #266dd3;
-    transition: transform 0.1875s cubic-bezier(0.375, 0, 0.675, 1) 0s;
-
-    &.is-inverted {
-      color: #fff;
-      background-color: #266dd3;
-    }
-
-    &:hover {
-      box-shadow: rgba(0, 0, 0, 0.125) 0px 2px 12px 2px;
-      transform: scale(1.025);
-      box-shadow: rgba(0, 0, 0, 0.125) 0px 2px 6px;
-      outline: 0px;
-    }
-  }
-}
-
 .is-hint {
   color: #7a8c97;
   margin-top: 10px;
