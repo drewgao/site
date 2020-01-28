@@ -3,8 +3,13 @@
     background-color: #266dd3;
 
     .hero-bg {
-      background: linear-gradient(rgba(38, 109, 211, 1), rgba(38, 109, 211, 1), rgba(38, 109, 211, .3), rgba(0, 0, 0, 0.5)),
-      url("/img/feature/min/flagship.jpg") center;
+      background: linear-gradient(
+          rgba(38, 109, 211, 1),
+          rgba(38, 109, 211, 1),
+          rgba(38, 109, 211, 0.3),
+          rgba(0, 0, 0, 0.5)
+        ),
+        url('/img/feature/min/flagship.jpg') center;
       background-size: cover;
     }
   }
@@ -181,11 +186,11 @@
     }
 
     li:after {
-      content: " · ";
+      content: ' · ';
     }
 
     li:last-child:after {
-      content: "";
+      content: '';
     }
   }
 
