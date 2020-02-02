@@ -1,0 +1,5 @@
+.hero.is-landing .hero-body {
+  background-color: #266dd3; }
+  .hero.is-landing .hero-body .hero-bg {
+    background: linear-gradient(#266dd3, #266dd3, rgba(38, 109, 211, 0.3), rgba(0, 0, 0, 0.5)), url("/img/feature/min/flagship.jpg") center;
+    background-size: cover; }
