@@ -14,3 +14,153 @@
     }
   }
 }
+
+#intro {
+  background-color: #f3f3f3;
+
+  .title {
+    font-weight: 800;
+    line-height: 1.5;
+    font-size: 4rem;
+
+    @media screen and (max-width: 32em) {
+      font-size: 3rem;
+    }
+  }
+
+  .section-body {
+    font-size: 1.5rem;
+
+    @media screen and (max-width: 32em) {
+      font-size: 1.3rem;
+    }
+  }
+
+  p {
+    margin-bottom: 1.2rem;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    line-height: 2;
+  }
+}
+
+#open {
+  .pretitle {
+    font-weight: 800;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    color: #718c97;
+  }
+
+  .title {
+    font-weight: 800;
+    line-height: 1.5;
+    font-size: 4rem;
+
+    @media screen and (max-width: 32em) {
+      font-size: 3rem;
+    }
+  }
+
+  .section-body {
+    font-size: 1.5rem;
+    max-width: 60ch;
+
+    @media screen and (max-width: 32em) {
+      font-size: 1.3rem;
+    }
+  }
+
+  p {
+    margin-bottom: 1.2rem;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    line-height: 2;
+  }
+
+  #boxes .box {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 5rem;
+    min-height: 25rem;
+
+    &#box-1 {
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0) 50%),
+        url('/img/feature/min/cincinnati_bottle.jpg') center;
+      background-size: cover;
+    }
+
+    &#box-2 {
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0) 50%),
+        url('/img/feature/min/codedaydc_hack.jpg') center;
+      background-size: cover;
+    }
+
+    &#box-3 {
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0) 50%),
+        url('/img/feature/min/hackchicago_banana.jpg') center;
+      background-size: cover;
+    }
+
+    .caption {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      font-size: 2rem;
+      font-weight: 800;
+      color: #fff;
+      text-shadow: rgb(0, 0, 0) 0px 1px 4px;
+    }
+  }
+}
+
+#prioritization {
+  line-height: 1.8;
+  margin-top: 1.5rem;
+
+  .title {
+    font-weight: 800;
+    font-size: 2rem;
+    line-height: 1.5;
+  }
+
+  p {
+    font-weight: 500;
+    font-size: 1.5rem;
+    margin: 0;
+
+    @media screen and (max-width: 32em) {
+      font-size: 1.375rem;
+    }
+  }
+}
+
+#cta {
+  text-align: center;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+
+  .container {
+    padding: 3rem;
+    background: linear-gradient(rgba(38, 109, 211, 1), rgba(0, 0, 0, .5)),
+    url('/img/feature/min/flagship.jpg') center;
+    background-size: cover;
+    border-radius: 5px;
+    box-shadow: 0 0.5em 1em -0.125em rgba(10,10,10,.1), 0 0 0 1px rgba(10,10,10,.02);
+
+    .title {
+      font-size: 2rem;
+      font-weight: 800;
+      color: #fff;
+  
+      a.cta {
+        color: #fff;
+        text-decoration: underline;
+      }
+    }
+  }
+}
