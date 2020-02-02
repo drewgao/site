@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!--[if lte IE 6]><html class="preIE7 preIE8 preIE9"><![endif]-->
+<!--[if IE 7]><html class="preIE8 preIE9"><![endif]-->
+<!--[if IE 8]><html class="preIE9"><![endif]-->
+<!--[if gte IE 9]><!-->
+<html>
+  <!--<![endif]-->
+
+  <head>
+
+    {{ partial "head/meta.html" . }}
+  
+    {{ partial "head/seo.html" . }}
+
+    <!-- Font Configuration -->
+    <link
+      rel="stylesheet"
+      href="//rsms.me/inter/inter.css"
+      type="text/css"
+      async
+    />
+
+    {{ $reset := resources.Get "global/scss/utils/reset.scss" | toCSS }}
+    {{ $bulma := resources.Get "global/scss/bulma/bulma.sass" | toCSS }}
+    {{ $globalScss := resources.Get "global/scss/global.scss" | toCSS }}
+    {{ $currentCss := resources.Get "blog/scss/post.scss" | toCSS }}
+  
+    {{ $styles := slice $reset $bulma $globalScss $currentCss | resources.Concat "blog/css/post-bundle.css" | postCSS | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}" crossorigin="anonymous" async>
+  </head>
+
+  <body>
+    {{ partial "header/nav.html" . }}
+
+    <section class="hero is-small is-landing is-dark">
+      <div class="hero-body">
+        <div class="hero-bg" style="background: linear-gradient(rgba(38, 109, 211, 1), rgba(38, 109, 211, 1), rgba(38, 109, 211, .3)),
+      url('{{ .Params.card }}') center"></div>
+        <div class="container">
+          <h1 class="title">
+            {{ .Title }}
+          </h1>
+          <p class="subtitle">
+            Posted <strong>{{ dateFormat "Jan 2, 2006" .PublishDate }}</strong> by <strong>{{ .Params.author }}</strong>{{ if isset .Params "editor" }} · Edited by {{ .Params.editor }}{{ end }}
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="container main">
+        {{ .Content }}
+    </section>
+    
+    {{ partial "footer/footer.html" . }}
+
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+
+    {{ $tracking := resources.Get "global/js/tracking.js" }}
+    {{ $globalJs := resources.Get "global/js/global.js" }}
+    {{ $currentJs := resources.Get "blog/js/post.js" }}
+
+    {{ $scripts := slice $tracking $globalJs $currentJs | resources.Concat "blog/js/post-bundle.js" | minify | fingerprint }}
+    <script src="{{ $scripts.RelPermalink }}" integrity="{{ $scripts.Data.Integrity }}" crossorigin="anonymous" async></script>
+
+    <script src="https://kit.fontawesome.com/a4f26b881b.js"></script>
+  </body>
+</html>

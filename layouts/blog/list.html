@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<!--[if lte IE 6]><html class="preIE7 preIE8 preIE9"><![endif]-->
+<!--[if IE 7]><html class="preIE8 preIE9"><![endif]-->
+<!--[if IE 8]><html class="preIE9"><![endif]-->
+<!--[if gte IE 9]><!-->
+<html>
+  <!--<![endif]-->
+
+  <head>
+
+    {{ partial "head/meta.html" . }}
+  
+    {{ partial "head/seo.html" . }}
+
+    <!-- Font Configuration -->
+    <link
+      rel="stylesheet"
+      href="//rsms.me/inter/inter.css"
+      type="text/css"
+      async
+    />
+
+    {{ $reset := resources.Get "global/scss/utils/reset.scss" | toCSS }}
+    {{ $bulma := resources.Get "global/scss/bulma/bulma.sass" | toCSS }}
+    {{ $globalScss := resources.Get "global/scss/global.scss" | toCSS }}
+    {{ $currentCss := resources.Get "advising/scss/main.scss" | toCSS }}
+  
+    {{ $styles := slice $reset $bulma $globalScss $currentCss | resources.Concat "advising/css/bundle.css" | postCSS | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}" crossorigin="anonymous" async>
+  </head>
+
+  <body>
+    {{ partial "header/nav.html" . }}
+
+    <section class="hero is-medium is-landing is-dark">
+      <div class="hero-body">
+        <div class="hero-bg"></div>
+        <div class="container">
+          <p class="title">
+            Blog<img src="/vectors/pig-square.svg" class="logo-float" />
+          </p>
+          <p class="subtitle">
+            Read the stories behind the students that we work with at Execute Big.
+          </p>
+        </div>
+        <p class="credit noselect">Photo: Flagship Summit, Tim Daw</p>
+      </div>
+    </section>
+
+    {{ range .Pages.ByPublishDate.Reverse }}
+    <p>
+    <a class="font-125" href="{{ .RelPermalink }}">{{ .Title }}</a>
+    </p>
+    {{ end }}
+
+    {{ partial "footer/footer.html" . }}
+
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+
+    {{ $tracking := resources.Get "global/js/tracking.js" }}
+    {{ $globalJs := resources.Get "global/js/global.js" }}
+    {{ $currentJs := resources.Get "advising/js/app.js" }}
+
+    {{ $scripts := slice $tracking $globalJs $currentJs | resources.Concat "advising/js/bundle.js" | minify | fingerprint }}
+    <script src="{{ $scripts.RelPermalink }}" integrity="{{ $scripts.Data.Integrity }}" crossorigin="anonymous" async></script>
+
+    <script src="https://kit.fontawesome.com/a4f26b881b.js"></script>
+  </body>
+</html>
