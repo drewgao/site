@@ -151,10 +151,15 @@
     background-size: cover;
     border-radius: 5px;
     box-shadow: 0 0.5em 1em -0.125em rgba(10,10,10,.1), 0 0 0 1px rgba(10,10,10,.02);
+    
+    @media screen and (max-width: 32em) {
+      margin: auto 1rem;
+    }
 
     .title {
       font-size: 2rem;
       font-weight: 800;
+      line-height: 2;
       color: #fff;
   
       a.cta {
