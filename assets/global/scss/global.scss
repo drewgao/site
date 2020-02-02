@@ -88,6 +88,15 @@ a.button {
     padding-top: 18px;
     padding-bottom: 18px;
     font-size: 24px;
+
+    @media screen and (max-width: 32em) {
+      padding-left: 18px;
+      padding-right: 18px;
+      padding-top: 12px;
+      padding-bottom: 12px;
+      font-size: 16px;
+      margin: 10px;
+    }
   }
 
   &.is-action {
@@ -158,6 +167,10 @@ a.button {
       margin-bottom: 2rem;
       font-weight: 800;
       text-shadow: 0 1px 4px rgba(0, 0, 0, 0.375);
+
+      @media screen and (max-width: 32em) {
+        font-size: 3rem;
+      }
     }
 
     .subtitle {
@@ -166,6 +179,10 @@ a.button {
       margin: auto;
       margin-bottom: 10px;
       text-shadow: 0 1px 4px rgba(0, 0, 0, 0.375);
+
+      @media screen and (max-width: 32em) {
+        font-size: 1.4rem;
+      }
 
       a {
         text-decoration: underline;
