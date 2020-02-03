@@ -7,12 +7,13 @@ read_var() {
     echo ${VAR[1]}
 }
 
-FILE="../static/data/events.js"
+FILE="../assets/grant/js/events.js"
 DATE=`date +"%m/%d/%Y %T"`
 
 # Load Airtable Key
-KEY=$(read_var AIRTABLE_KEY ../.env)
+KEY=$(read_var AIRTABLE_KEY .env)
 
+touch $FILE
 echo "rawEventData = \`[" > $FILE
 echo $(curl "https://api.airtable.com/v0/appfqDfMFzsUfMq14/List?view=API&fields=Event+Name&fields=Website" -H "Authorization: Bearer $KEY") >> $FILE
 echo "]\`;" >> $FILE
