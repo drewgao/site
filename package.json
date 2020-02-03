@@ -12,6 +12,8 @@
     "postcss-will-change-transition": "^1.2.0"
   },
   "scripts": {
-    "build": "hugo --minify"
+    "build": "hugo --minify",
+    "dev": "hugo server --disableFastRender --watch",
+    "start": "hugo server"
   }
 }

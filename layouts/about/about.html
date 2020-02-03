@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<!--[if lte IE 6]><html class="preIE7 preIE8 preIE9"><![endif]-->
+<!--[if IE 7]><html class="preIE8 preIE9"><![endif]-->
+<!--[if IE 8]><html class="preIE9"><![endif]-->
+<!--[if gte IE 9]><!-->
+<html>
+  <!--<![endif]-->
+
+  <head>
+
+    {{ partial "head/meta.html" . }}
+  
+    {{ partial "head/seo.html" . }}
+
+    <!-- Font Configuration -->
+    <link
+      rel="stylesheet"
+      href="//rsms.me/inter/inter.css"
+      type="text/css"
+      async
+    />
+
+    {{ $reset := resources.Get "global/scss/utils/reset.scss" | toCSS }}
+    {{ $bulma := resources.Get "global/scss/bulma/bulma.sass" | toCSS }}
+    {{ $globalScss := resources.Get "global/scss/global.scss" | toCSS }}
+    {{ $currentCss := resources.Get "about/scss/main.scss" | toCSS }}
+  
+    {{ $styles := slice $reset $bulma $globalScss $currentCss | resources.Concat "about/css/bundle.css" | postCSS | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}" crossorigin="anonymous" async>
+  </head>
+
+  <body>
+    {{ partial "header/nav.html" . }}
+
+    <section class="hero is-medium is-landing is-dark">
+      <div class="hero-body">
+        <div class="hero-bg"></div>
+        <div class="container">
+          <p class="title">
+            About Execute Big<img src="/vectors/pig-square.svg" class="logo-float" />
+          </p>
+          <p class="subtitle">
+            Dedicated to helping more students, leaders, and schools <strong>dream big and execute big</strong>. With our help and resources, pigs can fly.
+          </p>
+          <a class="button is-action is-large" href="https://medium.com/@executebig/Q4-2019"><i class="fas fa-trophy"></i>&ensp;Read Our Q4 Impact Report</a>
+        </div>
+        <p class="credit noselect">Photo: Mingjie, Megan & Sean, Founders</p>
+      </div>
+    </section>
+
+
+    {{ partial "footer/footer.html" . }}
+
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+
+    {{ $tracking := resources.Get "global/js/tracking.js" }}
+    {{ $globalJs := resources.Get "global/js/global.js" }}
+    {{ $currentJs := resources.Get "about/js/app.js" }}
+
+    {{ $scripts := slice $tracking $globalJs $currentJs | resources.Concat "about/js/bundle.js" | minify | fingerprint }}
+    <script src="{{ $scripts.RelPermalink }}" integrity="{{ $scripts.Data.Integrity }}" crossorigin="anonymous" async></script>
+
+    <script src="https://kit.fontawesome.com/a4f26b881b.js"></script>
+  </body>
+</html>

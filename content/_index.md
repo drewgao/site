@@ -1,7 +1,7 @@
 ---
 title: Execute Big
 type: home
-layout: single
+layout: home
 
 title: "Execute Big | Innovative & Purpose-Driven CS Programs"
 description: 

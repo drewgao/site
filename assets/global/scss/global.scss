@@ -3,7 +3,7 @@ button,
 input,
 select,
 textarea {
-  font-family: "Inter", sans-serif !important;
+  font-family: 'Inter', sans-serif !important;
 }
 
 ::selection {
@@ -64,4 +64,220 @@ textarea {
       }
     }
   }
+}
+
+
+a.button {
+  font-weight: bold;
+  line-height: 1.125;
+  -webkit-appearance: none;
+  cursor: pointer;
+  will-change: transform;
+  transform: scale(1);
+  border-width: initial;
+  border-style: none;
+  border-color: initial;
+  border-image: initial;
+  font-family: inherit;
+  box-shadow: rgba(0, 0, 0, 0.125) 0px 2px 12px;
+
+  &.is-large {
+    border-radius: 6px;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    font-size: 24px;
+
+    @media screen and (max-width: 32em) {
+      padding-left: 18px;
+      padding-right: 18px;
+      padding-top: 12px;
+      padding-bottom: 12px;
+      font-size: 16px;
+      margin: 10px!important;
+    }
+  }
+
+  &.is-action {
+    color: #266dd3;
+    transition: all 0.1875s cubic-bezier(0.375, 0, 0.675, 1) 0s;
+
+    &.is-inverted {
+      color: #fff;
+      background-color: #266dd3;
+    }
+
+    &:hover {
+      box-shadow: rgba(0, 0, 0, 0.125) 0px 2px 12px 2px;
+      transform: scale(1.025);
+      box-shadow: rgba(0, 0, 0, 0.125) 0px 2px 6px;
+      outline: 0px;
+    }
+  }
+}
+
+.hero {
+  &.is-landing {
+    background: none !important;
+    position: relative;
+    text-align: center;
+
+    .hero-body {
+      position: relative;
+      overflow: hidden;
+
+      .hero-bg {
+        position: absolute;
+        left: 0;
+        top: -9rem;
+        width: 102%;
+        height: calc(100% + 9rem);
+        filter: blur(8px);
+        transform: scale(1.1);
+        overflow: hidden;
+        opacity: 0.8;
+      }
+
+      .container {
+        margin-top: 3rem;
+
+        @media screen and (max-width: 32em) {
+          margin-top: 3rem;
+        }
+
+        a.button {
+          margin: 20px;
+        }
+      }
+    }
+
+    p.credit {
+      position: absolute;
+      width: 100%;
+      text-align: center;
+      left: 0;
+      bottom: 5px;
+      opacity: 0.5;
+      font-size: 0.7rem;
+    }
+
+    .title {
+      font-size: 5rem;
+      margin-bottom: 2rem;
+      font-weight: 800;
+      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.375);
+
+      @media screen and (max-width: 32em) {
+        font-size: 3rem;
+      }
+    }
+
+    .subtitle {
+      font-size: 2rem;
+      line-height: 1.8;
+      margin: auto;
+      margin-bottom: 10px;
+      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.375);
+
+      @media screen and (max-width: 32em) {
+        font-size: 1.4rem;
+      }
+
+      a {
+        text-decoration: underline;
+      }
+
+      @media screen and (max-width: 32em) {
+        font-size: 1.5rem;
+      }
+
+      strong {
+        font-weight: 700;
+      }
+
+      &.play {
+        margin: 15px;
+      }
+
+      &.is-hint {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-top: 15px;
+
+        @media screen and (max-width: 32em) {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
+
+.logo-float {
+  width: 80px;
+  padding-bottom: 30px;
+  margin-left: 10px;
+  animation: float 3s ease-in-out infinite;
+  cursor: pointer;
+  filter: drop-shadow(0 1px 4px rgba(0, 0, 0, 0.375));
+
+  @media screen and (max-width: 595px) {
+    display: none;
+  }
+
+  &:hover {
+    animation-play-state: paused;
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(-20px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
+}
+
+footer.footer {
+  padding: 3rem 1.5rem 3rem;
+  background: url(/vectors/pattern.svg) repeat rgb(249, 249, 250);
+
+  &.form-page {
+    background: #fff;
+    padding-top: 0;
+  }
+
+  img.is-tiny {
+    height: 50px;
+
+    &.is-pig {
+      margin-bottom: 15px;
+    }
+  }
+
+  hr.is-tiny {
+    width: 30px;
+    height: 1.1px;
+    margin: 12px auto;
+    background-color: #7a8c97;
+  }
+
+  .is-footer-head {
+    font-size: 1.3rem;
+    margin-bottom: 0 !important;
+  }
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Opera and Firefox */
 }

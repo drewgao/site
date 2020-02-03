@@ -1,112 +1,11 @@
-.hero {
-  &.is-landing {
-    background: none !important;
-    background-position: center;
-    background-attachment: fixed;
-    background-size: cover;
+.hero.is-landing {
+  .hero-body {
+    background-color: #266dd3;
 
-    text-align: center;
-
-    .hero-body {
-      position: relative;
-      overflow: hidden;
-      background: #266dd3;
-
-      .container {
-        margin-top: 3rem;
-
-        @media screen and (max-width: 32em) {
-          margin-top: 3rem;
-        }
-
-        a.button {
-          margin: 20px;
-        }
-      }
-    }
-
-    .title {
-      font-size: 5rem;
-      margin-bottom: 3rem;
-      font-weight: 800;
-    }
-
-    .subtitle {
-      font-size: 2rem;
-      line-height: 1.8;
-      margin: auto;
-      margin-bottom: 10px;
-
-      a {
-        text-decoration: underline;
-      }
-
-      @media screen and (max-width: 32em) {
-        font-size: 1.5rem;
-      }
-
-      strong {
-        font-weight: 700;
-      }
-
-      &.play {
-        margin: 15px;
-      }
-
-      &.is-hint {
-        font-size: 1.5rem;
-        font-weight: bold;
-        margin-top: 15px;
-
-        @media screen and (max-width: 32em) {
-          font-size: 1rem;
-        }
-      }
-    }
-
-    .is-disclaim {
-      margin-top: 0.5rem;
-    }
-  }
-}
-
-a.button {
-  font-weight: bold;
-  line-height: 1.125;
-  -webkit-appearance: none;
-  cursor: pointer;
-  will-change: transform;
-  transform: scale(1);
-  border-width: initial;
-  border-style: none;
-  border-color: initial;
-  border-image: initial;
-  font-family: inherit;
-  box-shadow: rgba(0, 0, 0, 0.125) 0px 2px 12px;
-
-  &.is-large {
-    border-radius: 6px;
-    padding-left: 24px;
-    padding-right: 24px;
-    padding-top: 18px;
-    padding-bottom: 18px;
-    font-size: 24px;
-  }
-
-  &.is-action {
-    color: #266dd3;
-    transition: transform 0.1875s cubic-bezier(0.375, 0, 0.675, 1) 0s;
-
-    &.is-inverted {
-      color: #fff;
-      background-color: #266dd3;
-    }
-
-    &:hover {
-      box-shadow: rgba(0, 0, 0, 0.125) 0px 2px 12px 2px;
-      transform: scale(1.025);
-      box-shadow: rgba(0, 0, 0, 0.125) 0px 2px 6px;
-      outline: 0px;
+    .hero-bg {
+      background: linear-gradient(rgba(38, 109, 211, 1), rgba(38, 109, 211, 1), rgba(38, 109, 211, .3), rgba(0, 0, 0, 0.5)),
+      url("/img/feature/min/technica.jpg") center;
+      background-size: cover;
     }
   }
 }
@@ -151,7 +50,7 @@ a.button {
     margin-block-end: 1em;
     margin-inline-start: 0;
     margin-inline-end: 0;
-    line-height: 1.675;
+    line-height: 2;
   }
 }
 
@@ -576,63 +475,5 @@ a.button {
         line-height: 1.675;
       }
     }
-  }
-}
-
-footer.footer {
-  padding: 3rem 1.5rem 3rem;
-  background: url(/vectors/pattern.svg) repeat rgb(249, 249, 250);
-
-  &.form-page {
-    background: #fff;
-    padding-top: 0;
-  }
-
-  img.is-tiny {
-    height: 50px;
-
-    &.is-pig {
-      margin-bottom: 15px;
-    }
-  }
-
-  hr.is-tiny {
-    width: 30px;
-    height: 1.1px;
-    margin: 12px auto;
-    background-color: #7a8c97;
-  }
-
-  .is-footer-head {
-    font-size: 1.3rem;
-    margin-bottom: 0 !important;
-  }
-}
-
-.logo-grant {
-  width: 50px;
-  padding-bottom: 30px;
-  margin-left: 10px;
-  animation: float 3s ease-in-out infinite;
-  cursor: pointer;
-
-  @media screen and (max-width: 595px) {
-    display: none;
-  }
-
-  &:hover {
-    animation-play-state: paused;
-  }
-}
-
-@keyframes float {
-  0% {
-    transform: translatey(0px);
-  }
-  50% {
-    transform: translatey(-20px);
-  }
-  100% {
-    transform: translatey(0px);
   }
 }
