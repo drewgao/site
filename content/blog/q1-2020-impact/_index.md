@@ -68,7 +68,7 @@ During our first few months, we had to pay for small administrative item like br
 
 ![Expense Distribution Illustration](images/4.png)
 
-In the next few months, we're going to see an increase in funding spent on students. With minimal administrative expenses expected, we want to spend over 95% of our future funding directly on students.
+In the next few months, we're going to see an **increase in funding spent on students**. With minimal administrative expenses expected, we want to spend over 95% of our future funding directly on students.
 
 ---
 
