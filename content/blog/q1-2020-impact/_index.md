@@ -4,7 +4,7 @@ layout: post
 
 title: "The Start of Something Great: Q1 Impact Steakment"
 description: Through these innovative, unique programs, we've found our way to stay involved and continue making an impact—just take a look.
-tags: ["Release"]
+tags: ["Impact"]
 card: images/3.png
 date: 2020-02-01
 author: Megan Cui
@@ -29,28 +29,28 @@ Through these innovative, unique programs, we've found our way to stay involved 
 
 ---
 
-## Travel Grant
+## Travel Grant: Wings for Students in Need
 
 ![Travel Grant Students](images/1.png)
 
-Since November of 2019, Execute Big has awarded **well over $1,500 in travel grants** to students all across the country. Here are some notable numbers:
+Since November of 2019, Execute Big has awarded **well over $1,500 in travel grants** to students all across the country (around $500 in this measuring quarter). Here are some notable numbers:
 
-* **67%** of grant recipients identified as female while **33%** identified as male;
-* **83%** of recipients were people of color;
-* **83%** of recipients were part of underrepresented minorities in the tech industry;
+* 67% of grant recipients identified as female while 33% identified as male;
+* 83% of recipients were people of color;
+* **83% of recipients were part of underrepresented minorities in the tech industry;**
 * 50% of recipients were from the Midwest, 33% were from the West, and 17% from the South;
 * Of hackathons that recipients attended, 60% were on the West Coast, 20% in the South, and 20% in the Northeast;
 * Of hackathons that recipients attended, 60% were directly catered toward underrepresented minorities in the tech industry (such as all non-binary/female hackathons, etc.).
 
 What's important to note is the high levels of representation from students from **disadvantaged geographic regions** (such as the Midwest and the South) and underrepresented demographics (such as women and people of color) attending events in **opportunity-filled areas** (such as the West and Northeast). 
 
-On top of funding students, Execute Big has made it possible for hackathons to reach students outside of their region —our travel grant has also been **listed on 15 hackathons' websites** (and counting!), with students also applying to attend non-listed events outside of our direct community.
+On top of funding students, Execute Big has made it possible for hackathons to reach students outside of their region —our travel grant has also been **listed on 15 hackathons' websites** (and counting!), including underrepresented groups-focused events like [PixelHacks](http://pixelhacks.com/) and [Superposition](https://superposition.tech/). Students are also applying to attend unique collegiate events outside of our direct community, such as [Technica](https://gotechnica.org), [Blueprint](https://blueprint.hackmit.org/#home) and [TechTogether Boston](https://boston.techtogether.io/).
 
 ---
 
-## Hackathon Consulting for Schools
+## Events: Schools Can Run Hacakthons, Too
 
-Many schools want to run hackathons, but few have the time or know-how to actually run an event. That's where Execute Big comes in-using our understanding of hackathons, running events, and all the nitty-gritty details, we help schools run amazing hackathons for students in their community.
+Many schools want to run hackathons, but few have the time or know-how to actually run an event. That's where Execute Big comes in—using our understanding of hackathons, running events, and all the nitty-gritty details, we help schools run amazing hackathons for students in their community.
 
 Since October of 2019, we've been working as hackathon event consultants with Gilmour Academy to launch and run [Hacks Academy](https://hacks.academy), their first hackathon. The event is completely free to attend and is set to run from February 29th to March 1st, 2020 for **75 high school students in the Cleveland metropolitan area**.
 
@@ -60,15 +60,15 @@ Hacks Academy will be the second event that Execute Big has organized as a part 
 
 ---
 
-## Finances
+## Finances: Every Dollar for Students
 
 Starting an organization like Execute Big could be expensive, but we try to keep our costs at a minimum. In addition to Hack Chicago's seeding funds, we also received close to $2,000 in donations from Hack Cincinnati, an event that happened over summer of 2019.
 
-During our first few months, we had to pay for small administrative item like branding and marketing material (domain, networking, etc.), yet the majority of our expenses are still taken up by Travel Grant. **79.9%** of our Q1 (November 2019 — January 2020) expenses are used to provide travel reimbursements for students, with administrative expenses taking up the other 20.1%. 
+During our first few months, we had to pay for small administrative items like branding and marketing material (domain, networking, etc.), yet the majority of our expenses are still taken up by Travel Grant. **79.9%** of our Q1 (November 2019 — January 2020) expenses are used to provide travel reimbursements for students, with administrative expenses taking up the other 20.1%. 
 
 ![Expense Distribution Illustration](images/4.png)
 
-In the next few months, we're going to see an **increase in funding spent on students**. With minimal administrative expenses expected, we want to spend over 95% of our future funding directly on students.
+In the next few months, we're going to see an **increase in the percentage of funding spent on students**. With minimal administrative expenses expected, we want to spend over 95% of our future funding directly on students.
 
 ---
 
@@ -76,13 +76,13 @@ In the next few months, we're going to see an **increase in funding spent on stu
 
 Execute Big is filling a niche in the technology industry that has been overlooked by giant companies and individuals alike. With our experience and dedication to the cause of educational accessibility, we hope to continue helping students dream big and execute big.
 
-*&mdash; In Cambridge, MA*
+*&mdash; February 2020 in Cambridge, MA*
 
 ---
 
 ### About Execute Big
 
 *Execute Big is a student-run non-profit organization dedicated to creating innovative and
-purpose-driven educational programs around the United States. Contributions to Execute Big are tax-deductible.*
+purpose-driven educational programs around the United States. We are fiscally sponsored by The Hack Foundation, a non-profit organization (EIN: 81-2908499). Contributions to Execute Big are tax-deductible.*
 
-[Donate](/donate/pay)&ensp;&middot;&ensp;[Contact](mailto:team@executebig.org)&ensp;&middot;&ensp;[Media](/assets/eb-branding.zip)
+[Donate](/donate/pay)&ensp;&middot;&ensp;[Contact](mailto:team@executebig.org)&ensp;&middot;&ensp;[Media Kit](/assets/eb-branding.zip)
