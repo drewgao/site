@@ -85,4 +85,4 @@ Execute Big is filling a niche in the technology industry that has been overlook
 *Execute Big is a student-run non-profit organization dedicated to creating innovative and
 purpose-driven educational programs around the United States. Contributions to Execute Big are tax-deductible.*
 
-[Donate](/donate/pay)&ensp;&middot;&ensp;[Contact](mailto:team@executebig.org)
+[Donate](/donate/pay)&ensp;&middot;&ensp;[Contact](mailto:team@executebig.org)&ensp;&middot;&ensp;[Media](/assets/eb-branding.zip)
