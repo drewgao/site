@@ -32,7 +32,7 @@
   <body>
     {{ partial "header/nav.html" . }}
 
-    <section class="hero is-medium is-landing is-dark">
+    <section class="hero is-small is-landing is-dark">
       <div class="hero-body">
         <div class="hero-bg"></div>
         <div class="container">
@@ -46,11 +46,36 @@
       </div>
     </section>
 
+    
+    <div class="section">
+    <div class="main container">
+
+
+    <div class="columns is-multiline">
     {{ range .Pages.ByPublishDate.Reverse }}
-    <p>
-    <a class="font-125" href="{{ .RelPermalink }}">{{ .Title }}</a>
-    </p>
+
+      <div class="column is-half is-full-tablet">
+        <a href="{{ .RelPermalink }}" >
+          <div class="post-card box" style="background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0) 60%),url('{{ .RelPermalink }}{{ .Params.card }}') center;background-size:cover">
+            
+            <p class="post-date">{{ dateFormat "Jan 2, 2006" .PublishDate }}</p>
+            <h1 class="post-title">
+              {{ .Title }}
+            </h1>
+            <p class="post-meta">
+              <span class="post-author">By {{ .Params.author }}</span>
+              &middot;
+              <span class="post-readtime">{{ .ReadingTime }} min read</span>
+            </p>
+          </div>
+        </a>
+      </div>
+
     {{ end }}
+    </div>
+
+    </div>
+    </div>
 
     {{ partial "footer/footer.html" . }}
 

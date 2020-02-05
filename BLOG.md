@@ -1,4 +1,4 @@
-# Blog
+# Blog Contribution Guide
 
 The stories behind the students that we work with at Execute Big. Submodule of [@executebig/site](https://github.com/executebig/site).
 

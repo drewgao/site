@@ -1,16 +1,73 @@
 .hero.is-landing {
-    .hero-body {
-      background-color: #266dd3;
-  
-      .hero-bg {
-        background: linear-gradient(
-            rgba(38, 109, 211, 1),
-            rgba(38, 109, 211, 1),
-            rgba(38, 109, 211, 0.3),
-            rgba(0, 0, 0, 0.5)
-          ),
-          url('/img/feature/min/mcdonogh.jpg') center;
-        background-size: cover;
+  .hero-body {
+    background-color: #266dd3;
+    padding-bottom: 3rem;
+
+    .hero-bg {
+      background: linear-gradient(
+          rgba(38, 109, 211, 1),
+          rgba(38, 109, 211, 1),
+          rgba(38, 109, 211, 0.3),
+          rgba(0, 0, 0, 0.5)
+        ),
+        url('/img/feature/min/mcdonogh.jpg') center;
+      background-size: cover;
+    }
+
+    .subtitle {
+      font-size: 1.5rem;
+
+      @media screen and (max-width: 32em) {
+        font-size: 1.2rem;
       }
     }
   }
+}
+
+.main {
+  text-rendering: optimizeLegibility;
+  line-height: 2;
+  font-size: 1.2rem;
+
+  @media only screen and (max-width: 600px) {
+    font-size: 1rem;
+  }
+
+  p {
+    margin-bottom: 1.2rem;
+
+    em {
+      font-style: italic;
+    }
+  }
+
+  img {
+    display: block;
+    margin: 3rem auto;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .footnote {
+    font-size: 0.5rem;
+  }
+
+  .post-card {
+    height: 20rem;
+
+    h1.post-title {
+      color: #fff;
+      text-shadow: rgb(0, 0, 0) 0px 1px 4px;
+      font-weight: 700;
+      font-size: 1.5rem;
+    }
+
+    p.post-meta, p.post-date {
+      color: #fff;
+      text-shadow: rgb(0, 0, 0) 0px 1px 4px;
+      font-size: 1rem;
+      margin-bottom: 0;
+    }
+
+  }
+}
