@@ -4,6 +4,7 @@ layout: post
 
 title: "The Start of Something Great: Q1 Impact Steakment"
 description: Through these innovative, unique programs, we've found our way to stay involved and continue making an impact—just take a look.
+tags: ["Administrative"]
 card: images/3.png
 date: 2020-02-01
 author: Megan Cui
@@ -56,6 +57,16 @@ Since October of 2019, we've been working as hackathon event consultants with Gi
 ![Hacks Academy Logo](images/2.png)
 
 Hacks Academy will be the second event that Execute Big has organized as a part of the hackathon consulting program.
+
+---
+
+## Finances
+
+Starting an organization like Execute Big could be expensive, but we try to keep our costs at a minimum . In addition to Hack Chicago's seeding funds, we also received close to $2,000 in donations from Hack Cincinnati, an event that happened over summer of 2019.
+
+During our first few months, we had to pay for small administrative item like branding and marketing material (domain, networking, etc.), yet the majority of our expenses are still taken up by Travel Grant. **79.9%** of our Q1 (November 2019 — January 2020) expenses are used to provide travel reimbursements for students, with administrative expenses taking up the other 20.1%. 
+
+In the next few months, we're going to see an increase in funding spent on students. With minimal administrative expenses expected, we want to spend over 95% of our future funding directly on students.
 
 ---
 

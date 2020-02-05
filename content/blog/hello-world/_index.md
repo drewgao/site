@@ -4,6 +4,7 @@ layout: post
 
 title: "Hello, World!"
 description: Thanks for visiting the Execute Big Blog!
+tags: ["Administrative"]
 card: images/sf.jpg
 date: 2019-11-30
 author: Mingjie Jiang

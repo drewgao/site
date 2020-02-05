@@ -4,6 +4,7 @@ layout: post
 
 title: "Student Highlight: Justina Chua at Technica"
 description: Reflection written by Justina Chua, a Travel Grant recipient. Edited by Execute Big staff.
+tags: ["Travel Grant"]
 card: images/7.png
 date: 2020-01-25
 author: Justina Chua

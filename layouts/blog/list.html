@@ -57,8 +57,8 @@
       <div class="column is-half is-full-tablet">
         <a href="{{ .RelPermalink }}" >
           <div class="post-card box" style="background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0) 60%),url('{{ .RelPermalink }}{{ .Params.card }}') center;background-size:cover">
-            
-            <p class="post-date">{{ dateFormat "Jan 2, 2006" .PublishDate }}</p>
+            {{$primaryTag := index (.Params.tags) 0 }}
+            <p class="post-meta"><span class="post-date">{{ dateFormat "Jan 2, 2006" .PublishDate }}</span> in <span class="post-tag">{{$primaryTag}}</span></p>
             <h1 class="post-title">
               {{ .Title }}
             </h1>
