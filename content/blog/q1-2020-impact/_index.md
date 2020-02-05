@@ -54,7 +54,7 @@ Many schools want to run hackathons, but few have the time or know-how to actual
 
 Since October of 2019, we've been working as hackathon event consultants with Gilmour Academy to launch and run [Hacks Academy](https://hacks.academy), their first hackathon. The event is completely free to attend and is set to run from February 29th to March 1st, 2020 for **75 high school students in the Cleveland metropolitan area**.
 
-![Hacks Academy Logo](images/2.png)
+![Hacks Academy Website](images/2.png)
 
 Hacks Academy will be the second event that Execute Big has organized as a part of the hackathon consulting program.
 
@@ -62,9 +62,11 @@ Hacks Academy will be the second event that Execute Big has organized as a part 
 
 ## Finances
 
-Starting an organization like Execute Big could be expensive, but we try to keep our costs at a minimum . In addition to Hack Chicago's seeding funds, we also received close to $2,000 in donations from Hack Cincinnati, an event that happened over summer of 2019.
+Starting an organization like Execute Big could be expensive, but we try to keep our costs at a minimum. In addition to Hack Chicago's seeding funds, we also received close to $2,000 in donations from Hack Cincinnati, an event that happened over summer of 2019.
 
 During our first few months, we had to pay for small administrative item like branding and marketing material (domain, networking, etc.), yet the majority of our expenses are still taken up by Travel Grant. **79.9%** of our Q1 (November 2019 — January 2020) expenses are used to provide travel reimbursements for students, with administrative expenses taking up the other 20.1%. 
+
+![Expense Distribution Illustration](images/4.png)
 
 In the next few months, we're going to see an increase in funding spent on students. With minimal administrative expenses expected, we want to spend over 95% of our future funding directly on students.
 

@@ -89,8 +89,9 @@
           <h1 class="title">
             {{ .Title }}
           </h1>
+          {{$primaryTag := index (.Params.tags) 0 }}
           <p class="subtitle">
-            Posted <strong>{{ dateFormat "Jan 2, 2006" .PublishDate }}</strong> by <strong>{{ .Params.author }}</strong>{{ if isset .Params "editor" }} · Edited by {{ .Params.editor }}{{ end }}
+            Posted <strong>{{ dateFormat "Jan 2, 2006" .PublishDate }}</strong> by <strong>{{ .Params.author }}</strong> in #{{ $primaryTag }}{{ if isset .Params "editor" }} · Edited by {{ .Params.editor }}{{ end }}
           </p>
         </div>
       </div>
