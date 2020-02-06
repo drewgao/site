@@ -54,19 +54,23 @@
     <div class="columns is-multiline is-centered">
     {{ range .Pages.ByPublishDate.Reverse }}
 
-      <div class="column is-half is-full-tablet">
+      <div class="column {{ if eq .Params.featured true }}is-full{{ else }}is-half is-full-tablet{{ end }}">
         <a href="{{ .RelPermalink }}" >
-          <div class="post-card box" style="background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0) 60%),url('{{ .RelPermalink }}{{ .Params.card }}') center;background-size:cover">
+          <div class="post-card box{{ if eq .Params.featured true }} featured{{ end }}" 
+                style="background: linear-gradient(rgba(38,109,211,.9) 20%, rgba(38,109,211,.1) 50%),url('{{ .RelPermalink }}{{ .Params.card }}') center;background-size:cover"
+                data-tilt data-tilt-max="2"
+                >
             {{$primaryTag := index (.Params.tags) 0 }}
-            <p class="post-meta"><span class="post-date">{{ dateFormat "Jan 2, 2006" .PublishDate }}</span> in <span class="post-tag">#{{$primaryTag}}</span></p>
+            <p class="post-pre">{{ if eq .Params.featured true }}★ Featured &middot; {{ end }}<span class="post-date">{{ dateFormat "Jan 2, 2006" .PublishDate }}</span></p>
             <h1 class="post-title">
               {{ .Title }}
             </h1>
             <p class="post-meta">
-              <span class="post-author">By {{ .Params.author }}</span>
+              <span class="post-author">By <strong>{{ .Params.author }}</strong></span>
               &middot;
               <span class="post-readtime">{{ .ReadingTime }} min read</span>
             </p>
+            <span class="post-tag"><i class="far fa-folder-open"></i> {{$primaryTag}}</span>
           </div>
         </a>
       </div>
@@ -87,9 +91,10 @@
 
     {{ $tracking := resources.Get "global/js/tracking.js" }}
     {{ $globalJs := resources.Get "global/js/global.js" }}
+    {{ $tilt := resources.Get "blog/js/tilt.min.js" }}
     {{ $currentJs := resources.Get "blog/js/list.js" }}
 
-    {{ $scripts := slice $tracking $globalJs $currentJs | resources.Concat "blog/js/list-bundle.js" | minify | fingerprint }}
+    {{ $scripts := slice $tracking $globalJs $tilt $currentJs | resources.Concat "blog/js/list-bundle.js" | minify | fingerprint }}
     <script src="{{ $scripts.RelPermalink }}" integrity="{{ $scripts.Data.Integrity }}" crossorigin="anonymous" async></script>
 
     <script src="https://kit.fontawesome.com/a4f26b881b.js"></script>

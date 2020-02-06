@@ -54,19 +54,46 @@
 
   .post-card {
     height: 20rem;
+    position: relative;
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+
+    &:hover {
+      box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    }
 
     h1.post-title {
       color: #fff;
       text-shadow: rgb(0, 0, 0) 0px 1px 4px;
       font-weight: 700;
       font-size: 1.5rem;
+      line-height: 1.5;
     }
 
-    p.post-meta {
+    p.post-meta, p.post-pre {
       color: #fff;
       text-shadow: rgb(0, 0, 0) 0px 1px 4px;
       font-size: 1rem;
       margin-bottom: 0;
+    }
+
+    p.post-meta {
+      position: absolute;
+      bottom: 10px;
+    }
+    
+    span.post-tag {
+      font-size: .9rem;
+      position: absolute;
+      right: 10px;
+      bottom: 10px;
+      display: inline-block;
+      background-color: #fff;
+      padding: 1px 8px;
+      line-height: 1.5;
+      color: #266dd3;
+      text-shadow: none;
+      border-radius: 2px;
+      font-weight: 600;
     }
 
   }
