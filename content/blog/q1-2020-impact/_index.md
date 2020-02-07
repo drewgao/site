@@ -46,7 +46,7 @@ Since November of 2019, Execute Big has awarded **well over $1,500 in travel gra
 
 What's important to note is the high levels of representation from students from **disadvantaged geographic regions** (such as the Midwest and the South) and underrepresented demographics (such as women and people of color) attending events in **opportunity-filled areas** (such as the West and Northeast). 
 
-On top of funding students, Execute Big has made it possible for hackathons to reach students outside of their region —our travel grant has also been **listed on 15 hackathons' websites** (and counting!), including underrepresented groups-focused events like [PixelHacks](http://pixelhacks.com/) and [Superposition](https://superposition.tech/). Students are also applying to attend unique collegiate events outside of our direct community, such as [Technica](https://gotechnica.org), [Blueprint](https://blueprint.hackmit.org/#home) and [TechTogether Boston](https://boston.techtogether.io/).
+On top of funding students, Execute Big has made it possible for hackathons to reach students outside of their region —our travel grant has also been **listed on 15 hackathons' websites** (and counting!), including underrepresented groups-focused events like [PixelHacks](http://pixelhacks.com/) and [Superposition](https://superposition.tech/). Students have also been admitted to attend unique collegiate events outside of our direct community, such as [Technica](https://gotechnica.org), [Blueprint](https://blueprint.hackmit.org/#home) and [TechTogether Boston](https://boston.techtogether.io/)—we'll be sharing more about their trips in the next few months!
 
 ---
 
