@@ -399,7 +399,7 @@ cssnano-util-same-parent@^4.0.0:
   resolved "https://registry.yarnpkg.com/cssnano-util-same-parent/-/cssnano-util-same-parent-4.0.1.tgz#574082fb2859d2db433855835d9a8456ea18bbf3"
   integrity sha512-WcKx5OY+KoSIAxBW6UBBRay1U6vkYheCdjyVNDm85zt5K9mHoGOfsOsqIszfAqrQQFIIKgjh2+FDgIj/zsl21Q==
 
-cssnano@^4.1.10:
+cssnano@4.1.10:
   version "4.1.10"
   resolved "https://registry.yarnpkg.com/cssnano/-/cssnano-4.1.10.tgz#0ac41f0b13d13d465487e111b778d42da631b8b2"
   integrity sha512-5wny+F6H4/8RgNlaqab4ktc3e0/blKutmq8yNlBFXA//nSFFAqAngjNVRzUvCgYROULmZZUoosL/KSoZo5aUaQ==
@@ -1042,7 +1042,7 @@ postcss-calc@^7.0.1:
     postcss-selector-parser "^5.0.0-rc.4"
     postcss-value-parser "^3.3.1"
 
-postcss-cli@^7.1.0:
+postcss-cli@7.1.0:
   version "7.1.0"
   resolved "https://registry.yarnpkg.com/postcss-cli/-/postcss-cli-7.1.0.tgz#769b07b8865aaa3e98c7c63a3d256b4f51e3e237"
   integrity sha512-tCGK0GO2reu644dUHxks8U2SAtKnzftQTAXN1dwzFPoKXZr0b7VX4vTkQ2Pl2Lunas6+o8uHR56hlcYBm1srZg==
@@ -1339,7 +1339,7 @@ postcss-value-parser@^3.0.0, postcss-value-parser@^3.3.1:
   resolved "https://registry.yarnpkg.com/postcss-value-parser/-/postcss-value-parser-3.3.1.tgz#9ff822547e2893213cf1c30efa51ac5fd1ba8281"
   integrity sha512-pISE66AbVkp4fDQ7VHBwRNXzAAKJjw4Vw7nWI/+Q3vuly7SNfgYXvm6i5IgFylHGK5sP/xHAbB7N49OS4gWNyQ==
 
-postcss-will-change-transition@^1.2.0:
+postcss-will-change-transition@1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/postcss-will-change-transition/-/postcss-will-change-transition-1.2.0.tgz#11d07c2c6268ccad68943c4ca5cb1812ffa6b6bc"
   integrity sha1-EdB8LGJozK1olDxMpcsYEv+mtrw=
@@ -1347,7 +1347,7 @@ postcss-will-change-transition@^1.2.0:
     css-properties-values "1.0.0"
     postcss "^6.0.1"
 
-postcss-will-change@^3.0.0:
+postcss-will-change@3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/postcss-will-change/-/postcss-will-change-3.0.0.tgz#5f601068886e74f50e0b90b94dad2ce1c7542489"
   integrity sha512-VngayiV9/eNd1UY/xadYfqXwQIS6kJg2c3VbfflzPGB6FdDZIYgBstfiepb4b438EZBOl9ALX6xHar/Vx7j0sA==
