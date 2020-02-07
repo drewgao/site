@@ -2,7 +2,7 @@
 type: blog
 layout: post
 
-title: "<small>Student Highlight:/small><br />Justina Chua at Technica"
+title: "<small>Student Highlight:</small><br />Justina Chua at Technica"
 safe_title: "Student Highlight: Justina Chua at Technica"
 description: Reflection written by Justina Chua, a Travel Grant recipient. Edited by Execute Big staff.
 tags: ["Travel Grant"]
