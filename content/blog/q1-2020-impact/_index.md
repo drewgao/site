@@ -1,6 +1,7 @@
 ---
 type: blog
 layout: post
+draft: true
 
 title: "<small>The Start of Something Great:</small><br />Q1 Impact Steakment"
 safe_title: "The Start of Something Great: Q1 Impact Steakment"
@@ -11,7 +12,6 @@ date: 2020-02-01
 author: Megan Cui
 editor: Mingjie Jiang
 featured: true
-draft: true
 ---
 
 ## Why Execute Big?
