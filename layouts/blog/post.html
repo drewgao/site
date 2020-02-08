@@ -9,8 +9,57 @@
   <head>
 
     {{ partial "head/meta.html" . }}
-  
-    {{ partial "head/seo.html" . }}
+
+    <!-- Customized Relative URL SEO-->
+    <meta name="image" content="{{ .Permalink }}{{ .Params.card }}" />
+    <link rel="shortcut icon" type="image/png" href="/img/logo-square.png" />
+    <title>{{ if isset .Params "safe_title" }}{{ .Params.safe_title }}{{ else }}{{ .Title }}{{ end }} | Execute Big</title>
+
+    <!-- SEO Block -->
+    <meta name="title" content="{{ if isset .Params "safe_title" }}{{ .Params.safe_title }}{{ else }}{{ .Title }}{{ end }} | Execute Big" />
+    <meta name="description" content="{{ .Params.description }}" />
+
+    {{ with .Params.keywords }}
+    <meta name="keywords" content="{{ range $i, $e := . }}{{ if $i }}, {{ end }}{{ $e }}{{ end }}" />
+    {{ end }}
+
+    <meta name="robots" content="index, follow" />
+    <meta name="image" content="{{ .Permalink }}{{ .Params.card }}" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="{{ if isset .Params "safe_title" }}{{ .Params.safe_title }}{{ else }}{{ .Title }}{{ end }} | Execute Big" />
+    <meta
+      name="twitter:description"
+      content="{{ .Params.description }}"
+    />
+    <meta name="twitter:site" content="@executebig" />
+    <meta
+      name="twitter:image"
+      content="{{ .Permalink }}{{ .Params.card }}"
+    />
+
+    <!-- Open Graph general (Facebook, Pinterest & Google+) -->
+    <meta property="og:title" content="{{ if isset .Params "safe_title" }}{{ .Params.safe_title }}{{ else }}{{ .Title }}{{ end }} | Execute Big">
+    <meta property="og:description" content="{{ .Params.description }}">
+    <meta property="og:image" content="{{ .Permalink }}{{ .Params.card }}">
+    <meta property="og:url" content="{{ .Permalink }}">
+    <meta property="og:site_name" content="{{ .Site.Title }}">
+    <meta property="og:locale" content="en_US">
+
+    {{ if isset .Params "video" }}
+    <meta property="og:video" content="{{ .Params.video }}">
+    {{ end }}
+
+    {{ if isset .Params "card" }}
+    <meta
+      property="og:image"
+      content="{{ .Permalink }}{{ .Params.card }}"
+    />
+    {{ end }}
+
+    <meta property="fb:admins" content="103505214345175">
+    <meta property="og:type" content="website">
 
     <!-- Font Configuration -->
     <link
@@ -30,7 +79,7 @@
   </head>
 
   <body>
-    {{ partial "header/nav.html" . }}
+    {{ partial "header/blog-nav.html" . }}
 
     <section class="hero is-small is-landing is-dark">
       <div class="hero-body">
@@ -38,8 +87,9 @@
       url('{{ .Params.card }}') center"></div>
         <div class="container">
           <h1 class="title">
-            {{ .Title }}
+            {{ with .Title }}{{ . | safeHTML }}{{ end }}
           </h1>
+          {{$primaryTag := index (.Params.tags) 0 }}
           <p class="subtitle">
             Posted <strong>{{ dateFormat "Jan 2, 2006" .PublishDate }}</strong> by <strong>{{ .Params.author }}</strong>{{ if isset .Params "editor" }} · Edited by {{ .Params.editor }}{{ end }}
           </p>
