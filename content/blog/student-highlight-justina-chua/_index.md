@@ -4,7 +4,7 @@ layout: post
 
 title: "<small>Student Highlight:</small><br />Justina Chua at Technica"
 safe_title: "Student Highlight: Justina Chua at Technica"
-description: Reflection written by Justina Chua, a Travel Grant recipient. Edited by Execute Big staff.
+description: Travel Grant reflection written by Justina Chua, a Grant recipient from Chicago who travelled to Technica in College Park, Maryland in November 2019.
 tags: ["Travel Grant"]
 card: images/7.png
 date: 2020-01-25
