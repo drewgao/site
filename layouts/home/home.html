@@ -7,8 +7,9 @@
   <!--<![endif]-->
 
   <head>
-    {{ partial "head/meta.html" . }}
 
+    {{ partial "head/meta.html" . }}
+  
     {{ partial "head/seo.html" . }}
 
     <!-- Font Configuration -->
@@ -21,34 +22,35 @@
 
     {{ $reset := resources.Get "global/scss/utils/reset.scss" | toCSS }}
     {{ $bulma := resources.Get "global/scss/bulma/bulma.sass" | toCSS }}
-    {{ $animate := resources.Get "home/css/animate.css" }}
     {{ $globalScss := resources.Get "global/scss/global.scss" | toCSS }}
     {{ $currentCss := resources.Get "home/scss/main.scss" | toCSS }}
   
-    {{ $styles := slice $reset $bulma $animate $globalScss $currentCss | resources.Concat "home/css/bundle.css" | postCSS | minify | fingerprint }}
+    {{ $styles := slice $reset $bulma $globalScss $currentCss | resources.Concat "home/css/bundle.css" | postCSS | minify | fingerprint }}
     <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}" crossorigin="anonymous" async>
   </head>
 
   <body>
-    <div class="bg-video-mask">
-      <video loop muted autoplay playsinline class="bg-video lazy" id="landing-vid">
-        <source data-src="/media/chicago.mp4" type="video/mp4">
-        <source data-src="/media/chicago.webm" type="video/webm">
-      </video>
-    </div>
-
     {{ partial "header/nav.html" . }}
 
-    <section class="hero is-fullheight-with-navbar is-landing is-dark">
+    <section class="hero is-medium is-landing is-dark">
       <div class="hero-body">
-        <a href="/about" class="main-logo">
-          <div class="container">
-              <h1 style="display: none">Execute Big</h1>
-              <img src="/vectors/logo-white.svg" alt="Execute Big Logo" width="300" id="top-logo" class="animated fadeInUp delay-1s">
-          </div>
-        </a>
+        <div class="hero-bg"></div>
+        <div class="container">
+          <img src="/vectors/logo-white.svg" />
+          <p class="title" style="display:none">
+            Execute Big
+          </p>
+          <p class="subtitle">
+            Dedicated to helping more students, leaders, and schools <strong>dream big and execute big</strong>. With our help and resources, pigs can fly.
+          </p>
+          <a class="button is-action is-large" href="/blog/q1-2020-impact/"><i class="fas fa-trophy"></i>&ensp;Read Our Q4 Impact Report</a>
+        </div>
+        <p class="credit noselect">Photo: Mingjie, Megan & Sean, Founders</p>
       </div>
     </section>
+
+
+    {{ partial "footer/footer.html" . }}
 
     <script
       src="https://code.jquery.com/jquery-3.4.1.min.js"
@@ -59,7 +61,7 @@
     {{ $tracking := resources.Get "global/js/tracking.js" }}
     {{ $globalJs := resources.Get "global/js/global.js" }}
     {{ $currentJs := resources.Get "home/js/app.js" }}
-  
+
     {{ $scripts := slice $tracking $globalJs $currentJs | resources.Concat "home/js/bundle.js" | minify | fingerprint }}
     <script src="{{ $scripts.RelPermalink }}" integrity="{{ $scripts.Data.Integrity }}" crossorigin="anonymous" async></script>
 

@@ -1,4 +1,4 @@
-<nav class="navbar{{ if not (eq .Type "home") }} is-eb{{ end }}">
+<nav class="navbar is-eb">
   <div class="navbar-brand">
     <div class="navbar-burger burger" data-target="uni-nav">
       <span></span>
@@ -11,9 +11,6 @@
     <div class="navbar-start">
       <a class="navbar-item{{ if eq .Type "home" }} is-active{{ end }}" href="/">
         Home
-      </a>
-      <a class="navbar-item{{ if eq .Type "about" }} is-active{{ end }}" href="/about">
-        About
       </a>
       <a class="navbar-item{{ if eq .Type "events" }} is-active{{ end }}" href="/events">
         Events
