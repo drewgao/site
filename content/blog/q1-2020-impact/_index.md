@@ -7,7 +7,7 @@ safe_title: "The Start of Something Great: Q1 Impact Steakment"
 description: Through these innovative, unique programs, we've found our way to stay involved and continue making an impact—just take a look.
 tags: ["Impact"]
 card: images/3.png
-date: 2020-02-01
+date: 2020-02-11
 author: Megan Cui
 editor: Mingjie Jiang
 featured: true
