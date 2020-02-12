@@ -84,7 +84,7 @@
     <section class="hero is-small is-landing is-dark">
       <div class="hero-body">
         <div class="hero-bg" style="background: linear-gradient(rgba(38, 109, 211, 1), rgba(38, 109, 211, 1), rgba(38, 109, 211, .3)),
-      url('{{ .Params.card }}') center"></div>
+      url('{{ .Params.card }}') center; background-size: cover"></div>
         <div class="container">
           <h1 class="title">
             {{ with .Title }}{{ . | safeHTML }}{{ end }}
