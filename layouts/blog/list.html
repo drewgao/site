@@ -57,7 +57,7 @@
       <div class="column {{ if eq .Params.featured true }}is-full{{ else }}is-half is-full-tablet{{ end }}">
         <a href="{{ .RelPermalink }}" >
           <div class="post-card box{{ if eq .Params.featured true }} featured{{ end }}" 
-                style="background: linear-gradient(rgba(38,109,211,.9) 20%, rgba(38,109,211,.1) 50%),url('{{ .RelPermalink }}{{ .Params.card }}') center;background-size:cover"
+                style="background: linear-gradient(rgba(0, 0, 0, .5) 0%, rgba(0, 0, 0, 0) 50%),url('{{ .RelPermalink }}{{ .Params.card }}') center;background-size:cover"
                 data-tilt data-tilt-max="2"
                 >
             {{$primaryTag := index (.Params.tags) 0 }}

@@ -10,7 +10,6 @@ card: images/3.png
 date: 2020-02-11
 author: Megan Cui
 editor: Mingjie Jiang
-featured: true
 ---
 
 ## Why Execute Big?
