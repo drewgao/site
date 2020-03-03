@@ -214,35 +214,6 @@ a.button {
   }
 }
 
-.logo-float {
-  width: 80px;
-  padding-bottom: 30px;
-  margin-left: 10px;
-  animation: float 3s ease-in-out infinite;
-  cursor: pointer;
-  filter: drop-shadow(0 1px 4px rgba(0, 0, 0, 0.375));
-
-  @media screen and (max-width: 595px) {
-    display: none;
-  }
-
-  &:hover {
-    animation-play-state: paused;
-  }
-}
-
-@keyframes float {
-  0% {
-    transform: translatey(0px);
-  }
-  50% {
-    transform: translatey(-20px);
-  }
-  100% {
-    transform: translatey(0px);
-  }
-}
-
 footer.footer {
   padding: 3rem 1.5rem 3rem;
   background: url(/vectors/pattern.svg) repeat rgb(249, 249, 250);
