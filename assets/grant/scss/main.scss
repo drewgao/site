@@ -565,15 +565,17 @@ hl {
 #start-landing {
   .title {
     font-weight: 800;
+    line-height: 1.5;
   }
 }
 
 #start {
   margin-top: 2rem;
   margin-bottom: 5rem;
-  
+
   @media screen and (max-width: 32em) {
     padding: 1.25rem;
+    margin-top: 0;
   }
 
   h2 {
@@ -588,4 +590,5 @@ hl {
     font-weight: 400;
     margin-bottom: 1rem;
   }
+  
 }
