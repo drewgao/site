@@ -6,10 +6,10 @@
       "handle": "filesystem"
     },
     {
-      "src": "/grant/apply",
+      "src": "/grant/apply/submit",
       "status": 302,
       "headers": {
-        "Location": "https://airtable.com/shrDejG7ussMpBTqJ"
+        "Location": "https://airtable.com/shrUUvKKekpkMHBn3"
       }
     },
     {
