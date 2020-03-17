@@ -2,9 +2,27 @@
   .hero-body {
     background-color: #266dd3;
 
+    .title.custom {
+      font-size: 4rem;
+      font-weight: 600;
+
+      @media screen and (max-width: 32em) {
+        font-size: 3rem;
+      }
+
+      strong {
+        font-weight: 800;
+      }
+    }
+
     .hero-bg {
-      background: linear-gradient(rgba(38, 109, 211, 1), rgba(38, 109, 211, 1), rgba(38, 109, 211, .3), rgba(0, 0, 0, 0.5)),
-      url("/img/feature/min/technica.jpg") center;
+      background: linear-gradient(
+          rgba(38, 109, 211, 1),
+          rgba(38, 109, 211, 1),
+          rgba(38, 109, 211, 0.3),
+          rgba(0, 0, 0, 0.5)
+        ),
+        url('/img/feature/min/technica.jpg') center;
       background-size: cover;
     }
   }
@@ -228,11 +246,11 @@
     }
 
     li:after {
-      content: " · ";
+      content: ' · ';
     }
 
     li:last-child:after {
-      content: "";
+      content: '';
     }
   }
 
