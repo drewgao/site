@@ -2,6 +2,10 @@
   .hero-body {
     background-color: #266dd3;
 
+    #landing-container {
+      animation-delay: .5s; //added to prevent flash when custom event is present
+    }
+
     .title.custom {
       font-size: 4rem;
       font-weight: 600;
