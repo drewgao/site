@@ -253,3 +253,26 @@ footer.footer {
   user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome, Opera and Firefox */
 }
+
+#announcement {
+  margin-bottom: 0;
+  display: none; // hide on default unless triggered by JS
+  
+  .message-header {
+    border-radius: 0;
+
+    p {
+      width: 100%;
+      text-align: center;
+      font-weight: 400;
+
+      a.cta {
+        font-weight: 600;
+
+        &:after {
+          content: ' »';
+        }
+      }
+    }
+  }
+}
