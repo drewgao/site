@@ -7,25 +7,11 @@
   <!--<![endif]-->
 
   <head>
+    {{ partial "head/global.html" . }}
 
-    {{ partial "head/meta.html" . }}
-  
-    {{ partial "head/seo.html" . }}
-
-    <!-- Font Configuration -->
-    <link
-      rel="stylesheet"
-      href="//rsms.me/inter/inter.css"
-      type="text/css"
-      async
-    />
-
-    {{ $reset := resources.Get "global/scss/utils/reset.scss" | toCSS }}
-    {{ $bulma := resources.Get "global/scss/bulma/bulma.sass" | toCSS }}
-    {{ $globalScss := resources.Get "global/scss/global.scss" | toCSS }}
     {{ $currentCss := resources.Get "grant/scss/main.scss" | toCSS }}
   
-    {{ $styles := slice $reset $bulma $globalScss $currentCss | resources.Concat "grant/css/bundle.css" | postCSS | minify | fingerprint }}
+    {{ $styles := slice $currentCss | resources.Concat "grant/css/bundle.css" | postCSS | minify | fingerprint }}
     <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}" crossorigin="anonymous" async>
   </head>
 
@@ -35,7 +21,7 @@
     <section class="hero is-medium is-landing is-dark">
       <div class="hero-body">
         <div class="hero-bg"></div>
-        <div class="container">
+        <div class="container animated fadeInUp">
           <p class="title" id="page-title">
             Travel Grant
           </p>
@@ -341,9 +327,8 @@
     {{ $tracking := resources.Get "global/js/tracking.js" }}
     {{ $globalJs := resources.Get "global/js/global.js" }}
     {{ $currentJs := resources.Get "grant/js/app.js" }}
-    {{ $drift := resources.Get "grant/js/drift.js" }}
   
-    {{ $scripts := slice $tracking $globalJs $currentJs $drift | resources.Concat "grant/js/bundle.js" | minify | fingerprint }}
+    {{ $scripts := slice $tracking $globalJs $currentJs | resources.Concat "grant/js/bundle.js" | minify | fingerprint }}
     <script src="{{ $scripts.RelPermalink }}" integrity="{{ $scripts.Data.Integrity }}" crossorigin="anonymous" async></script>
 
     <script src="https://kit.fontawesome.com/a4f26b881b.js"></script>

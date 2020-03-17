@@ -7,25 +7,11 @@
   <!--<![endif]-->
 
   <head>
+    {{ partial "head/global.html" . }}
 
-    {{ partial "head/meta.html" . }}
-  
-    {{ partial "head/seo.html" . }}
-
-    <!-- Font Configuration -->
-    <link
-      rel="stylesheet"
-      href="//rsms.me/inter/inter.css"
-      type="text/css"
-      async
-    />
-
-    {{ $reset := resources.Get "global/scss/utils/reset.scss" | toCSS }}
-    {{ $bulma := resources.Get "global/scss/bulma/bulma.sass" | toCSS }}
-    {{ $globalScss := resources.Get "global/scss/global.scss" | toCSS }}
     {{ $currentCss := resources.Get "advising/scss/main.scss" | toCSS }}
-  
-    {{ $styles := slice $reset $bulma $globalScss $currentCss | resources.Concat "advising/css/bundle.css" | postCSS | minify | fingerprint }}
+
+    {{ $styles := slice $currentCss | resources.Concat "advising/css/bundle.css" | postCSS | minify | fingerprint }}
     <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}" crossorigin="anonymous" async>
   </head>
 
@@ -35,7 +21,7 @@
     <section class="hero is-medium is-landing is-dark">
       <div class="hero-body">
         <div class="hero-bg"></div>
-        <div class="container">
+        <div class="container animated fadeInUp">
           <p class="title">
             Organizer Advising
           </p>

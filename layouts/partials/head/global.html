@@ -1,0 +1,14 @@
+{{ partial "head/meta.html" . }}
+{{ partial "head/seo.html" . }}
+{{ partial "head/schema.html" . }}
+
+<!-- Font Configuration -->
+<link rel="stylesheet" href="//rsms.me/inter/inter.css" type="text/css" async />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
+{{ $reset := resources.Get "global/scss/utils/reset.scss" | toCSS }}
+{{ $bulma := resources.Get "global/scss/bulma/bulma.sass" | toCSS }}
+{{ $globalScss := resources.Get "global/scss/global.scss" | toCSS }}
+
+{{ $globalStyles := slice $reset $bulma $globalScss | resources.Concat "/css/global.css" | postCSS | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $globalStyles.RelPermalink }}" integrity="{{ $globalStyles.Data.Integrity }}" crossorigin="anonymous" async>
