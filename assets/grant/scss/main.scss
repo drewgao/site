@@ -363,6 +363,11 @@
       font-weight: 800;
       margin-bottom: 0.5rem;
       font-size: 1.4rem;
+
+      .tag {
+        position: absolute;
+        right: 1.25rem;
+      }
     }
   }
 }
@@ -502,7 +507,6 @@
 
 hl {
   background-color: yellow;
-  font-style: italic;
 }
 
 #organizer {
@@ -555,5 +559,33 @@ hl {
         }
       }
     }
+  }
+}
+
+#start-landing {
+  .title {
+    font-weight: 800;
+  }
+}
+
+#start {
+  margin-top: 2rem;
+  margin-bottom: 5rem;
+  
+  @media screen and (max-width: 32em) {
+    padding: 1.25rem;
+  }
+
+  h2 {
+    font-weight: 800;
+    margin-top: 3rem;
+    text-transform: uppercase;
+  }
+
+  p {
+    font-size: 1.2rem;
+    line-height: 1.75;
+    font-weight: 400;
+    margin-bottom: 1rem;
   }
 }
