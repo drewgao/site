@@ -216,6 +216,7 @@ a.button {
 footer.footer {
   padding: 2rem 1.5rem 3rem;
   background: url(/vectors/pattern.svg) repeat rgb(249, 249, 250);
+  min-height: 12rem;
 
   .footer-menu {
     margin-top: .5rem;
@@ -281,10 +282,15 @@ footer.footer {
     }
   }
 
-  @media screen and (max-width: 32em){
+  @media screen and (max-width:64em){
     text-align: center;
+    height: auto;
 
-    div.right {
+    img.is-tiny {
+      display: none;
+    }
+
+    div.right, div.left {
       float: none!important;
     }
   }

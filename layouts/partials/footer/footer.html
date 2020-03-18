@@ -4,7 +4,7 @@
       <p class="is-footer-head"><strong>EXECUTE BIG</strong></p>
       <p class="is-hint is-condensed"><a href="mailto:team@executebig.org">team@executebig.org</a></p>
       <hr class="is-tiny" />-->
-      
+
     <div class="right is-pulled-right">
       <a href="/" class="pig-house">
         <img
@@ -13,7 +13,7 @@
           alt="Flying Pig"
         />
       </a>
-      <p>
+      <p class="social">
         <a href="https://facebook.com/ExecuteBig">
           <span class="icon is-medium">
             <i class="fab fa-facebook-f fa-lg"></i>
@@ -41,17 +41,20 @@
         </a>
       </p>
     </div>
-    <div class="footer-menu">
-      {{ partial "footer/footer-menu.html" . }}
-    </div>
-    <hr class="is-tiny" />
-    <div class="container footer-bottom">
-      <p class="copy">&copy;2020 Execute Big</p>
-      <span class="is-hint">
-        Execute Big is fiscally sponsored by
-        <a href="https://hackclub.com">The Hack Foundation</a>, a
-        501(c)(3) public charity with the EIN 81-2908499.
-      </span>
+
+    <div class="left is-pulled-left">
+      <div class="footer-menu">
+        {{ partial "footer/footer-menu.html" . }}
+      </div>
+      <hr class="is-tiny" />
+      <div class="container footer-bottom">
+        <p class="copy">&copy;2020 Execute Big</p>
+        <span class="is-hint">
+          Execute Big is fiscally sponsored by
+          <a href="https://hackclub.com">The Hack Foundation</a>, a 501(c)(3)
+          public charity with the EIN 81-2908499.
+        </span>
+      </div>
     </div>
   </div>
 </footer>

@@ -1,0 +1,142 @@
+.hero.is-landing {
+  .hero-body {
+    background-color: #266dd3;
+
+    .hero-bg {
+      background: linear-gradient(
+          rgba(38, 109, 211, 1),
+          rgba(38, 109, 211, 1),
+          rgba(38, 109, 211, 0.3),
+          rgba(0, 0, 0, 0.5)
+        ),
+        url('/img/feature/min/sf.jpg') center;
+      background-size: cover;
+    }
+  }
+}
+
+#founder, #team {
+  .header {
+    margin: auto;
+    width: 100%;
+
+    .title {
+      font-weight: 800;
+      font-size: 4rem;
+
+      @media screen and (max-width: 32em) {
+        font-size: 3rem;
+      }
+    }
+
+    .subtitle {
+      font-weight: 800;
+      font-size: 2.5rem;
+    }
+
+    .description {
+      font-weight: 500;
+      font-size: 1.4rem;
+      line-height: 1.7;
+    }
+  }
+
+  .profiles {
+    margin-top: 1.5rem;
+
+    .profile {
+      margin-bottom: 1rem;
+
+      img {
+        border-radius: 6px;
+        width: 128px;
+      }
+
+      .meta {
+        .name {
+          font-size: 27px;
+
+          @media screen and (max-width: 32em) {
+            font-size: 24px;
+          }
+        }
+
+        .is-hint {
+          font-size: 1rem;
+          line-height: 1.8;
+        }
+
+        p {
+          margin: 0;
+        }
+      }
+    }
+
+    p {
+      font-size: 1.1rem;
+      font-weight: 500;
+    }
+  }
+
+  .directory {
+    margin-top: 1rem;
+
+    .staff {
+      position: relative;
+
+      .content {
+        margin-top: .5rem;
+        h1 {
+          font-size: 1.2rem;
+          margin-bottom: 5px;
+        }
+      }
+
+      a.email {
+        background-color: #266dd3;
+        color: #fff;
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100%;
+        width: 20%;
+        text-align: center;
+        font-size: 1.5rem;
+        line-height: 4.5;
+        border-top-right-radius: 6px;
+        border-bottom-right-radius: 6px;
+      }
+    }
+  }
+}
+
+
+#cta {
+  text-align: center;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+
+  .container {
+    padding: 3rem;
+    background: linear-gradient(rgba(38, 109, 211, 1), rgba(0, 0, 0, .5));
+    background-size: cover;
+    border-radius: 5px;
+    box-shadow: 0 0.5em 1em -0.125em rgba(10,10,10,.1), 0 0 0 1px rgba(10,10,10,.02);
+    
+    @media screen and (max-width: 32em) {
+      margin: auto 1rem;
+    }
+
+    .title {
+      font-size: 2rem;
+      font-weight: 800;
+      line-height: 2;
+      color: #fff;
+  
+      a.cta {
+        color: #fff;
+        text-decoration: underline;
+      }
+    }
+  }
+}
