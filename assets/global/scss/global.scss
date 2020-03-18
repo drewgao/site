@@ -70,7 +70,6 @@ textarea {
   }
 }
 
-
 a.button {
   font-weight: bold;
   line-height: 1.125;
@@ -99,7 +98,7 @@ a.button {
       padding-top: 12px;
       padding-bottom: 12px;
       font-size: 16px;
-      margin: 10px!important;
+      margin: 10px !important;
     }
   }
 
@@ -215,8 +214,29 @@ a.button {
 }
 
 footer.footer {
-  padding: 3rem 1.5rem 3rem;
+  padding: 2rem 1.5rem 3rem;
   background: url(/vectors/pattern.svg) repeat rgb(249, 249, 250);
+
+  .footer-menu {
+    margin-top: .5rem;
+    ul {
+      list-style: none;
+      margin: 0;
+
+      li {
+        display: inline;
+
+        &:not(:last-child) {
+          margin-right: 2px;
+
+          &:after {
+            margin-left: 6px;
+            content: '·';
+          }
+        }
+      }
+    }
+  }
 
   &.form-page {
     background: #fff;
@@ -224,23 +244,49 @@ footer.footer {
   }
 
   img.is-tiny {
-    height: 50px;
+    height: 40px;
 
     &.is-pig {
-      margin-bottom: 15px;
+      margin-bottom: 5px;
+      margin-left: 4.5rem;
     }
   }
 
   hr.is-tiny {
-    width: 30px;
-    height: 1.1px;
     margin: 12px auto;
-    background-color: #7a8c97;
   }
 
   .is-footer-head {
     font-size: 1.3rem;
     margin-bottom: 0 !important;
+  }
+
+  p.copy {
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 0;
+  }
+
+  .is-hint {
+    color: rgb(122, 140, 151);
+    font-size: 0.8rem;
+    line-height: 1;
+  }
+
+  a {
+    transition: all 0.2s ease;
+
+    &:hover {
+      color: #509cda !important;
+    }
+  }
+
+  @media screen and (max-width: 32em){
+    text-align: center;
+
+    div.right {
+      float: none!important;
+    }
   }
 }
 
@@ -257,7 +303,7 @@ footer.footer {
 #announcement {
   margin-bottom: 0;
   display: none; // hide on default unless triggered by JS
-  
+
   .message-header {
     border-radius: 0;
 
