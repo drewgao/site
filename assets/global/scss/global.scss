@@ -228,9 +228,8 @@ footer.footer {
         display: inline;
 
         &:not(:last-child) {
-          margin-right: 2px;
-
           &:after {
+            margin-right: 6px;
             margin-left: 6px;
             content: '·';
           }
