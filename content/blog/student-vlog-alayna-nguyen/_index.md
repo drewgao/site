@@ -2,8 +2,7 @@
 type: blog
 layout: post
 
-title: "<small>Student Vlog:</small><br />Alayna's Trip to PixelHacks IV"
-safe_title: "Student Vlog: Alayna's Trip to PixelHacks IV"
+title: "Student Vlog: Alayna's Trip to PixelHacks IV"
 description: With the help of Execute Big's Travel Grant, high school junior Alayna Nguyen from Naperville, IL was able to attend PixelHacks IV, a 24-hour all-female student-run hackathon in the Bay Area. 
 tags: ["Travel Grant"]
 card: images/1.jpg

@@ -2,8 +2,7 @@
 type: blog
 layout: post
 
-title: "<small>The Start of Something Great:</small><br />Q1 Impact Steakment"
-safe_title: "The Start of Something Great: Q1 Impact Steakment"
+title: "The Start of Something Great: Q1 Impact Steakment"
 description: Through these innovative, unique programs, we've found our way to stay involved and continue making an impact—just take a look.
 tags: ["Impact"]
 card: images/3.png

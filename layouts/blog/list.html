@@ -34,38 +34,34 @@
 
     
     <div class="section">
-    <div class="main container">
-
-
-    <div class="columns is-multiline is-centered">
-    {{ range .Pages.ByPublishDate.Reverse }}
-      {{ if not .Draft }}
-      <div class="column {{ if eq .Params.featured true }}is-full{{ else }}is-half is-full-tablet{{ end }}">
-        <a href="{{ .RelPermalink }}" >
-          <div class="post-card box{{ if eq .Params.featured true }} featured{{ end }}" 
-                style="background: linear-gradient(rgba(0, 0, 0, .5) 0%, rgba(0, 0, 0, 0) 50%),url('{{ .RelPermalink }}{{ .Params.card }}') center;background-size:cover"
-                data-tilt data-tilt-max="2"
-                >
-            {{$primaryTag := index (.Params.tags) 0 }}
-            <p class="post-pre">{{ if eq .Params.featured true }}★ Featured &middot; {{ end }}<span class="post-date">{{ dateFormat "Jan 2, 2006" .PublishDate }}</span></p>
-            <h1 class="post-title">
-              {{ with .Title }}{{ . | safeHTML }}{{ end }}
-            </h1>
-            <p class="post-meta">
-              <span class="post-author">By <strong>{{ .Params.author }}</strong></span>
-              &middot;
-              <span class="post-readtime">{{ .ReadingTime }} min read</span>
-            </p>
-            <span class="post-tag"><i class="far fa-folder-open"></i>&nbsp;{{$primaryTag}}</span>
-          </div>
-        </a>
+      <div class="main container">
+        {{ range $index, $element := .Pages.ByPublishDate.Reverse }}
+          {{ if not .Draft }}
+            <a href="{{ .RelPermalink }}" >
+              <div class="post-card box{{ if eq .Params.featured true }} featured{{ end }} animated fadeInUp" style="--animation-order: {{$index}};">
+                {{$primaryTag := index (.Params.tags) 0 }}
+                <img class="image bg" src="{{ .RelPermalink }}{{ .Params.card }}" />
+                <div class="main">
+                  <p class="post-pre">{{ if eq .Params.featured true }}★ Featured &middot; {{ end }}<span class="post-date">{{ dateFormat "Jan 2, 2006" .PublishDate }}</span>
+                     in <span class="post-tag">{{$primaryTag}}</span></p>
+                  <h1 class="post-title">
+                    {{ .Title }}
+                  </h1>
+                  <p class="is-hint">{{ .Description }}</p>
+                  <!--
+                  <p class="post-meta">
+                    <span class="post-author">By <strong>{{ .Params.author }}</strong></span>
+                    &middot;
+                    <span class="post-readtime">{{ .ReadingTime }} min read</span>
+                  </p>
+                  -->
+                </div>
+                
+              </div>
+            </a>
+          {{ end }}
+        {{ end }}
       </div>
-      {{ end }}
-
-    {{ end }}
-    </div>
-
-    </div>
     </div>
 
     {{ partial "footer/footer.html" . }}
@@ -78,10 +74,9 @@
 
     {{ $tracking := resources.Get "global/js/tracking.js" }}
     {{ $globalJs := resources.Get "global/js/global.js" }}
-    {{ $tilt := resources.Get "blog/js/tilt.min.js" }}
     {{ $currentJs := resources.Get "blog/js/list.js" }}
 
-    {{ $scripts := slice $tracking $globalJs $tilt $currentJs | resources.Concat "blog/js/list-bundle.js" | minify | fingerprint }}
+    {{ $scripts := slice $tracking $globalJs $currentJs | resources.Concat "blog/js/list-bundle.js" | minify | fingerprint }}
     <script src="{{ $scripts.RelPermalink }}" integrity="{{ $scripts.Data.Integrity }}" crossorigin="anonymous" async></script>
 
     <script src="https://kit.fontawesome.com/a4f26b881b.js"></script>

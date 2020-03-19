@@ -2,8 +2,7 @@
 type: blog
 layout: post
 
-title: "<small>Student Highlight:</small><br />Justina Chua at Technica"
-safe_title: "Student Highlight: Justina Chua at Technica"
+title: "Student Highlight: Justina Chua at Technica"
 description: Reflection written by Justina Chua, a Travel Grant recipient who travelled from Chicago to College Park, Maryland to attend Technica in November 2019.
 tags: ["Travel Grant"]
 card: images/7.png
