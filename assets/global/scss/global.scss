@@ -224,18 +224,6 @@ footer.footer {
       list-style: none;
       margin: 0;
 
-      &.hackclub {
-        color: #ec3750;
-
-        a {
-          color: #ec3750;
-
-          &:hover {
-            color: #ec3750 !important;
-          }
-        }
-      }
-
       li {
         display: inline;
 
@@ -275,7 +263,6 @@ footer.footer {
 
   p.copy {
     font-size: 0.9rem;
-    font-weight: 600;
     margin-bottom: 0;
   }
 
