@@ -219,10 +219,22 @@ footer.footer {
   min-height: 12rem;
 
   .footer-menu {
-    margin-top: .5rem;
+    margin-top: 0.5rem;
     ul {
       list-style: none;
       margin: 0;
+
+      &.hackclub {
+        color: #ec3750;
+
+        a {
+          color: #ec3750;
+
+          &:hover {
+            color: #ec3750 !important;
+          }
+        }
+      }
 
       li {
         display: inline;
@@ -275,13 +287,13 @@ footer.footer {
 
   a {
     transition: all 0.2s ease;
-
+    
     &:hover {
-      color: #509cda !important;
+      opacity: 0.7;
     }
   }
 
-  @media screen and (max-width:64em){
+  @media screen and (max-width: 64em) {
     text-align: center;
     height: auto;
 
@@ -289,8 +301,9 @@ footer.footer {
       display: none;
     }
 
-    div.right, div.left {
-      float: none!important;
+    div.right,
+    div.left {
+      float: none !important;
     }
   }
 }
