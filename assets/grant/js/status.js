@@ -39,7 +39,9 @@ $('#checkButton').click(() => {
 
       if (data['amount']) {
         $('#status-form').append(
-          `<p>Your approved maximum amount of Travel Grant is <strong>$${(Math.round(data['amount'] * 100) / 100).toFixed(2)}</strong>. You're subject to the Travel Grant Student 
+          `<p>Your approved maximum amount of Travel Grant is <strong>$${(
+            Math.round(data['amount'] * 100) / 100
+          ).toFixed(2)}</strong>. You're subject to the Travel Grant Student 
           Agreement (emailed) when booking your travel for the event. If you have any questions, please reach out to us via email: <a href="mailto:team@executebig.org">team@executebig.org</a>.</p>`
         )
       }
@@ -70,3 +72,17 @@ function validateEmail(email) {
   var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
   return re.test(String(email).toLowerCase())
 }
+
+function getUrlParameter(name) {
+  name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]')
+  var regex = new RegExp('[\\?&]' + name + '=([^&#]*)')
+  var results = regex.exec(location.search)
+  return results === null
+    ? ''
+    : decodeURIComponent(results[1].replace(/\+/g, ' '))
+}
+
+$(function() {
+  $('#name').val(getUrlParameter('name'))
+  $('#email').val(getUrlParameter('email'))
+})
