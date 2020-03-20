@@ -39,7 +39,7 @@ $('#checkButton').click(() => {
 
       if (data['amount']) {
         $('#status-form').append(
-          `<p>Your approved maximum amount of Travel Grant is <strong>$${data['amount']}</strong>. You're subject to the Travel Grant Student 
+          `<p>Your approved maximum amount of Travel Grant is <strong>$${(Math.round(data['amount'] * 100) / 100).toFixed(2)}</strong>. You're subject to the Travel Grant Student 
           Agreement (emailed) when booking your travel for the event. If you have any questions, please reach out to us via email: <a href="mailto:team@executebig.org">team@executebig.org</a>.</p>`
         )
       }
