@@ -10,7 +10,7 @@ $(document).ready(function() {
 // script for announcement state saving
 const lastClosed = parseInt(localStorage.getItem('lastClosed'))
 
-if (
+if (typeof announcementId !== 'undefined' &&
   announcementId != -1 && // if there is an announcemnet
   !(lastClosed != NaN && lastClosed >= announcementId) // if the announcement has not been closed before
 ) {

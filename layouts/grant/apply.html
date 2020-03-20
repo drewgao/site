@@ -61,5 +61,21 @@
                 title="Submit Your Application">Submit Your Application!</a>
             </div>
         </section>
+
+        {{ partial "footer/footer.html" . }}
+
+        <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"
+        ></script>
+
+        {{ $tracking := resources.Get "global/js/tracking.js" }}
+        {{ $globalJs := resources.Get "global/js/global.js" }}
+
+        {{ $scripts := slice $tracking $globalJs | resources.Concat "grant/js/apply-bundle.js" | minify | fingerprint }}
+        <script src="{{ $scripts.RelPermalink }}" integrity="{{ $scripts.Data.Integrity }}" crossorigin="anonymous" async></script>
+
+        <script src="https://kit.fontawesome.com/a4f26b881b.js"></script>
   </body>
 </html>

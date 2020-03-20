@@ -572,6 +572,9 @@ hl {
       font-size: 2rem;
     }
   }
+  .subtitle {
+    line-height: 2;
+  }
 }
 
 #start {
@@ -596,4 +599,17 @@ hl {
     margin-bottom: 1rem;
   }
   
+}
+
+#status {
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+
+  p {
+    line-height: 2;
+  }
+
+  p:not(:last-child) {
+    margin-bottom: 1rem;
+  }
 }
