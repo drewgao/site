@@ -12,3 +12,6 @@
 
 {{ $globalStyles := slice $reset $bulma $globalScss | resources.Concat "/css/global.css" | postCSS | minify | fingerprint }}
 <link rel="stylesheet" href="{{ $globalStyles.RelPermalink }}" integrity="{{ $globalStyles.Data.Integrity }}" crossorigin="anonymous" async>
+
+{{ $instantPage := resources.Get "global/js/instantpage.js" }}
+<script src="{{ $instantPage.RelPermalink }}" defer></script>
