@@ -7,7 +7,7 @@
   "license": "MIT",
   "dependencies": {
     "cssnano": "4.1.10",
-    "postcss-cli": "7.1.0",
+    "postcss-cli": "7.1.1",
     "postcss-will-change": "3.0.0",
     "postcss-will-change-transition": "1.2.0"
   },
