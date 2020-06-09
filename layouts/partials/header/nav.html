@@ -14,14 +14,17 @@
         Execute Big
       </a>
       <span class="navbar-item is-hidden-mobile is-hidden-tablet-only">·</span>
-      <a class="navbar-item{{ if eq .Type "events" }} is-active{{ end }}" href="/events">
-        Events
+      <a class="navbar-item{{ if eq .Type "blog" }} is-active{{ end }}" href="https://research.executebig.org">
+        <span style="color: #ffdd57; font-weight: 800">Research</span>
       </a>
-      <a class="navbar-item{{ if eq .Type "grant" }} is-active{{ end }}" href="/grant">
-        Grant
+      <a class="navbar-item{{ if eq .Type "events" }} is-active{{ end }}" href="/events" style="color: lightgray">
+        !Events
       </a>
-      <a class="navbar-item{{ if eq .Type "advising" }} is-active{{ end }}" href="/advising">
-        Advising
+      <a class="navbar-item{{ if eq .Type "grant" }} is-active{{ end }}" href="/grant" style="color: lightgray">
+        !Grant
+      </a>
+      <a class="navbar-item{{ if eq .Type "advising" }} is-active{{ end }}" href="/advising" style="color: lightgray">
+        !Advising
       </a>
       <a class="navbar-item{{ if eq .Type "blog" }} is-active{{ end }}" href="/blog">
         Blog
