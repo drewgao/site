@@ -1,0 +1,37 @@
+<!-- COVID-19 Research Modal -->
+
+<div class="modal" id="research-modal">
+  <div class="modal-background" onclick="javascript:killResearchModal()"></div>
+  <div class="modal-card" style="border-radius: 5px;">
+    <section class="modal-card-body" style="padding: 30px">
+      <h1 class="title" style="font-size: 1.5rem; font-weight: 700;">
+        <span style="color: rgb(38, 109, 211);">Execute Big</span> Research
+      </h1>
+
+      <p style="line-height: 2; margin-bottom: 1.5rem;">
+        Due to public health concerns, our regular programs are suspended until
+        the COVID-19 emergency ends. However, we're keeping our promise to
+        continue to impact the student hacker community with the launch of <strong>our
+        own research project</strong>. Check out the website to learn more.
+      </p>
+
+      <div class="is-pulled-right">
+      <a class="button" onclick="javascript:killResearchModal(true)">Do Not Show Again</a>
+      &ensp;
+      <a class="button is-eb has-text-white" href="https://research.executebig.org">Execute Big Research »</a></div>
+    </section>
+  </div>
+</div>
+
+<script>
+    if (!localStorage.getItem('noResearch'))
+        document.getElementById('research-modal').classList.add('is-active');
+
+    killResearchModal = (forever) => {
+        document.getElementById('research-modal').classList.remove('is-active');
+        if (forever)
+            localStorage.setItem('noResearch', true)
+    }
+</script>
+
+<!-- End COVID-19 Research Modal -->
